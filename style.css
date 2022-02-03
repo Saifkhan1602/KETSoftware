@@ -1,0 +1,6063 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #08192b;
+}
+html {
+  scroll-behavior: smooth;
+}
+#header {
+  width: 100%;
+  position: relative;
+}
+.image_cont_slider {
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image_cont_slider .carousel_item .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 160px 180px 0 180px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.image_cont_slider .carousel_item .carouse_cap_cc,
+.image_cont_slider .carousel_item .carouse_cap_sa {
+  padding-top: 210px;
+}
+
+.image_cont_slider .carousel_item {
+  display: none;
+}
+.image_cont_slider .carousel_item,
+.image_cont_slider .carousel_item img {
+  height: 100%;
+  width: 100%;
+}
+
+.left_arrow,
+.right_arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  font-size: 25px;
+  border-radius: 60%;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.prev {
+  left: 30px;
+}
+.next {
+  right: 30px;
+}
+.carousel-caption .Exclnc_One {
+  color: #088f8f;
+}
+.Csoftware_Dservice_heading h1 {
+  color: #088f8f;
+}
+.carousel-caption h1 {
+  font-size: 30px;
+  padding: 0 0 10px 0;
+  color: #fff;
+  font-weight: bold;
+}
+.carousel-caption h3 {
+  font-size: 22px;
+  color: #088f8f;
+  padding: 10px 0;
+}
+.carousel-caption p {
+  font-size: 15px;
+  word-spacing: 2px;
+}
+#Contact_header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url("https://media.istockphoto.com/photos/contact-us-picture-id1049658692?k=20&m=1049658692&s=612x612&w=0&h=z3sXVbzDit8RKnsC0ihEuFub42FqfmbRcP4vWHOKLK4=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo h1 a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.container,
+.container_header_services,
+.container_header_contact,
+.container_header_about {
+  background: transparent;
+  transition: background-color 1s ease;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.sticky .container,
+.sticky .container_header_services,
+.sticky .container_header_contact,
+.sticky .container_header_about {
+  height: 60px;
+  background-color: rgba(30, 67, 86, 0.8);
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.3);
+  border-bottom: 0.1px solid #08192b;
+}
+.sticky .container a,
+.sticky .container_header_services a,
+.sticky .container_header_contact a,
+.sticky .container_header_about a {
+  color: #fff;
+}
+.navbar .fa-times,
+.navbar .fa-bars {
+  display: none;
+}
+.nav_menu ul {
+  display: flex;
+}
+.nav_menu ul li {
+  list-style: none;
+  margin: 0 15px;
+  position: relative;
+}
+.nav_menu ul li::after {
+  content: "";
+  width: 0%;
+  display: block;
+  background: #088f8f;
+  height: 2px;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav_menu ul li:hover::after {
+  width: 100%;
+}
+.nav_menu ul li a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.SH_logo {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 2.5px;
+  border-radius: 6px;
+}
+
+.nav_menu .services_down li,
+.nav_menu .product_down li {
+  margin: 0;
+  background-color: #fff;
+  color: rgb(12, 27, 43);
+  text-align: left;
+}
+.nav_menu ul .services_down,
+.nav_menu ul .product_down {
+  position: absolute;
+  top: 26px;
+  display: none;
+}
+
+.nav_menu ul li:hover > .services_down,
+.nav_menu ul li:hover > .product_down {
+  display: block;
+}
+.dropdown .services_down li a,
+.nav_menu .product_down li a {
+  color: rgb(12, 27, 43);
+  font-size: 14px;
+  font-weight: 100;
+}
+.nav_menu ul .services_down li {
+  width: 210px;
+  font-size: 14px;
+  padding: 6px 0 6px 20px;
+  border-top: none;
+  cursor: pointer;
+  margin-left: -70px;
+}
+.nav_menu ul .product_down li {
+  width: 150px;
+  padding: 2px 0 6px 20px;
+  border-top: none;
+  cursor: pointer;
+  margin-left: -45px;
+}
+.nav_menu ul .services_down li:hover,
+.nav_menu ul .product_down li:hover {
+  background-color: #fff;
+}
+#navbar_menu .fa-bars {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 1s;
+}
+.nav_menu_main .fa-times {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 1s;
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+.nav_menu_main {
+  display: none;
+  width: 240px;
+  text-align: center;
+  position: relative;
+  top: 130px;
+}
+.nav_menu_main h2 {
+  font-size: 27px;
+  color: #fff;
+}
+.nav_menu_main p {
+  font-size: 15px;
+  color: #fff;
+}
+
+.carousel-caption .welcome_ket {
+  color: transparent;
+  font-size: 38px;
+  position: relative;
+  -webkit-text-stroke: 0.3px #fff;
+  background: url("https://images.unsplash.com/photo-1559777797-fa9b93def046?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8emVicmElMjBjcm9zc2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: animate 12s linear infinite;
+}
+.services_h1 h1,
+.expertise_box h1 {
+  color: transparent;
+  font-size: 38px;
+  margin: 10px 0;
+  position: relative;
+  -webkit-text-stroke: 0.3px #fff;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQstKUj6FcxmxRKY8M1XxqdlMJXDHMIqz4f1Q&usqp=CAU");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: animate_service 25s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+@keyframes animate_service {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.welcome_ket h2 {
+  color: rgb(173, 162, 4);
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+.welcome_ket a {
+  transition: 1s;
+}
+.welcome_ket .welcome_btn {
+  padding: 10px 20px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: transparent;
+  border: 3px solid rgba(218, 205, 30, 0.3);
+  border-radius: 23px;
+  cursor: pointer;
+  transition: 1s;
+  font-size: 16px;
+}
+.welcome_ket .welcome_btn:hover {
+  color: #fff;
+  background-color: rgba(218, 205, 30, 0.5);
+}
+.services,
+.ContactUS {
+  margin: 40px 0;
+}
+.services_h1 {
+  text-align: center;
+  font-size: 25px;
+  color: #08192b;
+}
+.services_h1 p {
+  font-size: 20px;
+  color: #088f8f;
+  padding: 5px 250px;
+  font-weight: 500;
+}
+.Services_h1 p {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  padding: 5px 100px;
+  font-weight: 500;
+}
+.services_main {
+  background-color: #fff;
+  padding: 20px 0;
+  margin: 30px auto;
+}
+.Row_6,
+.Row_5 {
+  margin: 0 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Row_6 .icon-box,
+.Row_5 .icon-box {
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin: 40px;
+  height: 290px;
+  position: relative;
+  width: 590px;
+  padding: 5px;
+  box-shadow: 1px 2px 10px 7px #111a334d;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.Row_6 #icon_Main_Box {
+  height: 250px !important;
+}
+
+.icon-box .icon {
+  margin: 0 30px 0 20px;
+}
+.icon-box :nth-child(2) {
+  text-align: left;
+}
+.icon-box:hover {
+  box-shadow: 0 5px 26px 4px rgba(44, 53, 78, 0.14);
+  transition: all 0.6s ease-in-out;
+}
+.services_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.icon-box .icon i {
+  height: 60px;
+  width: 60px;
+  border: 1.3px dashed #08192b;
+  border-radius: 50%;
+  color: #088f8f;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-size: 28px;
+}
+.icon-box .title {
+  color: #088f8f;
+  position: absolute;
+  top: 30px;
+  font-size: 20px;
+}
+.icon-box .description {
+  font-size: 15px;
+  position: absolute;
+  top: 65px;
+}
+.icon-box a button {
+  position: absolute;
+  right: 235px;
+  bottom: 20px;
+  background-color: #088f8f;
+  color: #fff;
+}
+.icon-box a button:hover {
+  background-color: #fff;
+  color: #08192b;
+}
+
+.about_btn a button {
+  font-weight: bold;
+}
+.icon-box button {
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #4caadd;
+  width: 120px;
+  border-radius: 6px;
+  font-size: 17px;
+  margin-top: 20px;
+  transition: 1s;
+  cursor: pointer;
+}
+.about_btn {
+  margin: 20px 20px 0 0;
+}
+.services_btn button,
+.about_btn button {
+  padding: 10px 15px;
+  background-color: #088f8f;
+  border: 2px solid #fff;
+  width: 135px;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 1s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.about_box,
+.about_values,
+.why_us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding: 25px 40px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgb(204, 204, 204);
+  border-radius: 20px;
+  margin: 80px auto;
+}
+.left_about h2,
+.about_design h3,
+.about_qlt_asrnce h3 {
+  color: #088f8f;
+  font-size: 20px;
+}
+.left_about .it_prtnr {
+  color: #088f8f;
+}
+.about_design,
+.about_qlt_asrnce {
+  background-color: rgb(228, 217, 217);
+  border-radius: 10px;
+  border: none;
+  margin: 10px 0;
+  width: 90%;
+  padding: 0 10px;
+  box-shadow: 1px 4px 4px 4px rgba(87, 86, 86, 0.5);
+}
+.about_design p,
+.about_qlt_asrnce p {
+  font-size: 16px;
+}
+.left_about h1 {
+  color: #08192b;
+  padding: 10px 0 15px 0;
+  font-size: 27px;
+}
+.left_about p {
+  padding: 4px 0;
+  margin-right: 50px;
+  font-size: 16px;
+}
+.about_value_right {
+  margin-top: 0;
+  padding-left: 40px;
+}
+.left_about,
+.right_about {
+  width: 50%;
+}
+.Values_description h2,
+.about_value_ h2,
+.about_value_ h1 {
+  color: #088f8f;
+}
+.about_value_ h2,
+.about_value_ h1 {
+  padding: 0 0 7px 0;
+}
+.about_value_ p {
+  padding-bottom: 20px;
+}
+.about_value_left img {
+  width: 90%;
+}
+
+.right_about img {
+  width: 100%;
+}
+.about_value_ {
+  text-align: center;
+}
+.Value_box_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  margin: 40px auto;
+}
+.values_Boxes {
+  width: 48%;
+  position: relative;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+#Value_img {
+  position: relative;
+  margin-left: -20px;
+  overflow: hidden;
+  width: calc(100% + 40px);
+}
+.values_Boxes:hover img {
+  transform: scale(1.2);
+}
+.Values_description {
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0px 2px 15px rgb(0 0 0 / 30%);
+  position: absolute;
+  border-top: 4px solid #fff;
+  bottom: -100px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 180px;
+}
+.Values_description h2 {
+  padding-bottom: 15px;
+}
+.Values_description:hover {
+  border-color: #088f8f;
+}
+.benifits_staffService h1 {
+  color: #088f8f !important;
+  font-size: 40px;
+}
+.left_about_ h2 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.Values_description p {
+  font-size: 16px;
+}
+.values_Boxes #Value_img img {
+  width: 95%;
+  height: 50vh;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+}
+.about_values .values_icons {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.values_icons :nth-child(1) {
+  margin: 0 10px 0 0;
+}
+.footer_main {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  background-color: #0d2735;
+  width: 100%;
+  padding: 45px 70px;
+}
+.footer_main h2 {
+  margin-bottom: 10px;
+  color: #088f8f;
+  text-align: left;
+}
+.footer_main h2 a {
+  text-decoration: none;
+  color: #088f8f;
+}
+.links_footer {
+  width: 19%;
+}
+
+.services_footer {
+  width: 25%;
+}
+.Ket_footer {
+  width: 29%;
+}
+.contact_footer {
+  width: 27%;
+}
+.footer_service_list ul {
+  text-align: left;
+}
+
+.footer_service_list ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.contact_footer :nth-child(2),
+.Ket_footer p {
+  text-align: left;
+}
+
+.services_footer li,
+.contact_footer li {
+  list-style: none;
+  padding: 5px 0;
+}
+.Ket_footer a,
+.contact_footer a,
+.links_footer a {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+.Ket_footer a {
+  padding: 0 5px 0 0;
+}
+.links_footer ul a li .fas {
+  font-size: 14px;
+  color: #088f8f;
+}
+.copy_ket_footer {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background-color: #0b212d;
+}
+.footer_main .fas {
+  padding-right: 7px;
+  color: #088f8f;
+}
+.footer_main .links_footer ul a li {
+  text-align: left;
+  padding: 5px 0;
+}
+.links_footer ul a li {
+  display: flex;
+  align-items: center;
+}
+.social_links_ftr {
+  display: flex;
+  align-items: center;
+}
+
+.social_links_ftr .fab {
+  font-size: 25px;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding: 8px;
+}
+.social_links_ftr .fa-twitter-square {
+  background-color: #55acee;
+}
+.social_links_ftr .fa-facebook-square {
+  background-color: #3b5998;
+}
+.social_links_ftr .fa-instagram-square {
+  background-color: #c32aa3;
+}
+.social_links_ftr .fa-linkedin {
+  background-color: #0e76a8;
+}
+@media (max-width: 720px) {
+  .container,
+  .container_header_about,
+  .container_header_services {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 15px 22px 12px 25px;
+    justify-content: space-between;
+  }
+  .sticky .container .logo h1 a,
+  .sticky .container_header_services .logo h1 a,
+  .sticky .container_header_about .logo h1 a,
+  .sticky .container_header_contact .logo h1 a {
+    color: #fff !important;
+  }
+  #Contact_header .container_header_contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 15px 22px 10px 25px;
+  }
+  .logo h1 a {
+    font-size: 19px;
+  }
+  .nav_menu ul {
+    display: block;
+  }
+  .dropdown .services_down li,
+  .nav_menu ul .product_down li {
+    display: none;
+  }
+  .nav_menu {
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 170px;
+    top: 0;
+    right: -170px;
+    text-align: left;
+    z-index: 1;
+    transition: 1s;
+  }
+  .nav_menu ul {
+    padding: 5px 0 20px 5px;
+  }
+  .nav_menu ul li a {
+    color: #08192b;
+  }
+  .navbar .fa-times,
+  .navbar .fa-bars {
+    display: block;
+    color: #088f8f;
+    font-size: 23px;
+    margin: 15px 0 10px 15px;
+    cursor: pointer;
+  }
+  .navbar .fa-bars {
+    color: #fff;
+  }
+}
+/* expertise */
+.expertise_box {
+  text-align: center;
+  margin: 10px 0 100px 0;
+}
+.expertise_box h1 {
+  padding: 20px 0;
+}
+.our_expertise_slides {
+  margin: 20px auto 40px auto;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: space-around;
+}
+.our_expertise_slides > div {
+  width: 20%;
+  height: 300px;
+  padding: 20px 0;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  transition: 1s ease;
+  box-shadow: 0 0 3px 4px rgb(182, 180, 180);
+}
+.our_expertise_slides > div:hover {
+  border: none;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.5);
+}
+.our_expertise_slides > div h3 {
+  font-size: 19px;
+  padding: 10px 0;
+  color: #088f8f;
+}
+.our_expertise_slides > div p {
+  font-size: 16px;
+  padding: 0 5px;
+}
+/* contact_page */
+.container_header_contact {
+  background: transparent;
+  transition: background-color 1s ease;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.Services_h1 {
+  padding-top: 10%;
+}
+.bestForYou_service .D_Mimg,
+.bestForYou_service .content_box {
+  width: 50%;
+}
+.Services_h1 h1 {
+  text-align: center;
+  color: #088f8f;
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.ContactUs_h1 h1,
+.AboutUs_h1 h1 {
+  text-align: center;
+  padding-top: 10%;
+  color: #fff;
+  font-size: 38px;
+}
+
+.container_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container_contact .contact_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 50px 0;
+  border-radius: 5px;
+}
+.col_right_contact form {
+  padding: 12px 10px;
+}
+.col_left_contact {
+  width: 45%;
+  text-align: center;
+  margin: 20px;
+}
+.col_contact_EC img,
+.col_location img {
+  height: 40px;
+}
+.col_right_contact {
+  width: 55%;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0 0 30px rgb(214 215 216 / 70%);
+}
+.col_contact_EC {
+  width: 45%;
+  height: 140px;
+}
+.info_box_lctn {
+  width: 100%;
+}
+.info_box_lctn .fas {
+  padding: 10px 14px !important;
+}
+.info_box_lctn .fas,
+.col_contact_EC .fas {
+  font-size: 35px;
+  color: #088f8f;
+  border-radius: 50%;
+  border: 1px dashed #088f8f;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.contact_cmpny {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.col_contact_EC,
+.info_box_lctn {
+  /* border: 1px solid #c0c0c0; */
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgb(214 215 216 / 70%);
+  cursor: pointer;
+  transition: 1s;
+}
+.col_contact_EC:hover,
+.info_box_lctn:hover {
+  box-shadow: 1px 4px 4px 4px rgba(87, 86, 86, 0.753);
+}
+.col_right_contact input,
+.col_right_contact textarea {
+  width: 90%;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid rgba(29, 42, 68, 0.548);
+  padding: 10px;
+  margin: 10px 60px;
+  outline: none;
+}
+
+.form_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 94.5%;
+}
+.contact_btn button {
+  background-color: #088f8f;
+  color: #fff;
+  transition: 0.9s;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact_btn button:hover {
+  background-color: #fff;
+  color: rgb(29, 42, 68);
+  border: 1px solid grey;
+}
+.map_Location {
+  width: 95%;
+  margin: 60px auto 120px auto;
+  padding: 20px 10px;
+}
+.map_Location iframe {
+  width: 100%;
+  height: 350px;
+}
+.Qlty_solutions_flex > div h2 {
+  color: #088f8f;
+}
+/* services-page*/
+
+#Services_header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://wallpaperbat.com/img/360433-professional-web-design-services-server-experts.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* About us */
+
+#About_header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvcnBvcmF0ZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* why ket */
+
+.why_img,
+.about_why {
+  width: 50%;
+}
+.why_img img {
+  width: 100%;
+}
+.about_why {
+  padding-right: 50px;
+}
+.why_ket h1 {
+  font-size: 27px;
+  padding: 10px 0;
+}
+.reasons {
+  text-align: left;
+}
+.reasons h3 {
+  font-size: 22px;
+  padding: 10px 0;
+  color: #088f8f;
+}
+.reasons p {
+  font-size: 16px;
+}
+
+/* service pages */
+#Serviceone_header {
+  height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://innovationatwork.ieee.org/wp-content/uploads/2019/09/bigstock-d-Rendering-Cloud-Computing-267217441_1024X684.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cloud_service {
+  position: absolute;
+  top: 30%;
+  left: 13.5%;
+  color: #fff;
+  width: 50%;
+}
+.cloud_service h1 {
+  color: #088f8f;
+}
+.cloud_service p,
+.StaffAug_service p {
+  font-size: 16px;
+  padding-top: 20px;
+}
+.cloud_reason {
+  margin: 60px auto;
+  text-align: center;
+  width: 70%;
+  color: #08192b;
+}
+.cloud_reason h2,
+.whystaffService h2 {
+  font-size: 40px;
+  line-height: 60px;
+  color: #088f8f;
+  margin-bottom: 10px;
+}
+.cloud_reason p,
+.whystaffService p {
+  font-size: 21px;
+  line-height: 34px;
+}
+.cloud_reasons {
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  width: 70%;
+}
+.cloud_reasons ol li {
+  line-height: 30px;
+  padding: 5px 0;
+  list-style-type: square;
+}
+.cloud_reasons > div {
+  margin-left: 70px;
+}
+.cloud_Services {
+  margin: 60px auto;
+}
+.cloud_Services h1 {
+  text-align: center;
+  font-size: 34px;
+  color: #088f8f;
+}
+.cloudServices_flex {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 60px 0;
+}
+.cloudServices_flex > div {
+  width: 37%;
+}
+.cloudServices_flex > div h2 {
+  margin: 10px 0;
+  color: #088f8f;
+}
+.cloudServices_flex > div p {
+  font-size: 15px;
+  padding: 10px 0;
+}
+.cloudServices_flex > div ul li {
+  line-height: 28px;
+  margin-left: 16px;
+  list-style: none;
+  font-size: 15px;
+  padding-top: 5px;
+}
+.cloudServices_flex > div ul li::before,
+.benifits_staffService ul li::before,
+.itconsult_flex > div ul li::before,
+.staff_paras ul li::before,
+.C_software_d_cycle > div ul li::before,
+.BenifitsOfDM ul li::before,
+.mobile_app_platforms ul li::before,
+.We_offer_mobile_app ul li::before,
+.Manual_testing ul li::before,
+.Automated_testing ul li::before,
+.Qlty_solutions_flex ul li::before {
+  content: "\2022";
+  color: #088f8f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.cloud_Exp {
+  margin: 10px auto 70px auto;
+  text-align: center;
+}
+.cloud_Exp h1 {
+  font-size: 34px;
+  padding: 10px 0 20px 0;
+  line-height: 64px;
+  color: #088f8f;
+}
+.cloud_Exp .exp_paras {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 60px;
+  padding: 0 20px;
+}
+.cloud_Exp .exp_paras p {
+  text-align: left;
+  border-left: 3px solid #088f8f;
+  padding-left: 10px;
+}
+
+#staffaug {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://www.plasmacomp.com/wp-content/uploads/2016/03/it-staff-outsourcing.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.STAFF_AUG {
+  color: #fff;
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  width: 65%;
+}
+.staffService h1,
+.itCunslt_trainingService h1,
+.cyber_securityService h1,
+.web_developeService h1,
+.C_software_developeService h1,
+.Digital_marketingService h1,
+.Mobile_applicationService h1,
+.Business_IntelligenceService h1,
+.Testing_supportService h1,
+.Project_managementService h1 {
+  font-size: 35px;
+  color: #088f8f !important;
+}
+.staffService p,
+.benifits_staffService p,
+.itCunslt_trainingService p,
+.web_developeService p,
+.C_software_developeService p {
+  padding: 10px 0 10px 0;
+  font-size: 16px;
+}
+.staff_paras {
+  margin: 60px auto;
+}
+.staff_paras ul {
+  width: 80%;
+  margin: auto;
+}
+.staff_paras ul li {
+  padding-bottom: 17px;
+  list-style: none;
+}
+.whystaffService,
+.benifits_staffService {
+  margin: 80px auto;
+  text-align: center;
+}
+.whystaffService ul li,
+.benifits_staffService ul li {
+  padding: 3px 0;
+  width: 60%;
+  margin: 10px auto;
+  text-align: left;
+  font-size: 18px;
+  list-style-type: upper-roman;
+}
+.benifits_staffService p {
+  width: 60%;
+  margin: 10px auto;
+}
+.benifits_staffService ul {
+  margin-left: 20px;
+}
+.benifits_staffService ul li {
+  list-style: none;
+  color: #08192b;
+  font-size: 16px;
+}
+
+#itCunslt_training {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://thumbs.dreamstime.com/b/business-consulting-concept-virtual-screen-business-consulting-concept-virtual-screen-194855452.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.itCunslt_trainingService {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 13.5%;
+  width: 50%;
+}
+.itconsult_flex {
+  display: flex;
+  width: 90%;
+  margin: 50px auto 80px auto;
+}
+.itconsult_flex > div {
+  width: 50%;
+  margin: 10px 50px;
+}
+.itconsult_flex > div h1 {
+  color: #088f8f;
+  padding: 5px 0 20px 0;
+}
+.steps_work h2,
+.Best_software_box h1,
+.Testing_services_box h1 {
+  color: #088f8f;
+}
+.itconsult_flex > div p {
+  padding-bottom: 15px;
+}
+.itconsult_flex > div ul {
+  margin-left: 16px;
+}
+.itconsult_flex > div ul li {
+  list-style: none;
+  padding-bottom: 3px;
+}
+
+#cyberSecurity_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://www.kaspersky.co.in/content/en-in/images/repository/isc/2017-images/What-is-Cyber-Security.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.cyber_securityService {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 13.5%;
+  width: 50%;
+}
+.cyber_securityService h2 {
+  padding: 20px 0;
+}
+#helpC_S {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+#helpC_S h3 {
+  font-size: 30px;
+}
+.C_S_flex_service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.C_S_flex_service > div {
+  width: 50%;
+  margin: 10px 0 20px 0;
+}
+.C_S_flex_service > div h2 {
+  text-align: center;
+  color: #088f8f;
+}
+.Wa_v_Do {
+  width: 60%;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  margin: 40px auto 60px auto;
+  background-color: #c0c0c0;
+}
+.Wa_v_Do h2 {
+  color: #088f8f;
+  padding: 0 0 15px 0;
+}
+#S_D_cycle h1,
+#S_DE h1 {
+  color: #088f8f;
+}
+.Wa_v_Do_flex {
+  display: flex;
+  width: 80%;
+  margin: 40px auto;
+  border-top: 2px solid #088f8f;
+  padding-top: 13px;
+}
+.Wa_v_Do_flex > div {
+  width: 50%;
+  margin: 10px 20px;
+}
+.Wa_v_Do_flex > div h4 {
+  color: #088f8f;
+  margin-bottom: 10px;
+}
+.securt_box {
+  width: 60%;
+  margin: 60px auto;
+}
+.securt_box h2,
+.securt_box h4 {
+  padding-bottom: 15px;
+  color: #088f8f;
+}
+.securt_box h2 {
+  text-align: center;
+}
+.securt_box ol {
+  margin-left: 15px;
+  padding-top: 20px;
+}
+.securt_box ol li {
+  padding-top: 10px;
+}
+
+#webDevelope_service,
+#C_software_develope_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://itxitpro.com/front/img/web-development-services.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.web_developeService,
+.C_software_developeService,
+.Digital_marketingService,
+.Mobile_applicationService,
+.Business_IntelligenceService,
+.Testing_supportService,
+.Project_managementService {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 13.5%;
+  width: 50%;
+}
+#webdevelope_service_heading,
+.Csoftware_Dservice_heading {
+  text-align: center;
+  margin: 40px;
+}
+#webdevelope_service_heading h1,
+.webdevelopement_services h2,
+.Csoftware_Dservice_heading h1,
+.Digital_marketingService h1,
+.Mobile_applicationService h1,
+.Business_IntelligenceService h1,
+.Testing_supportService h1,
+.itCunslt_trainingService h1,
+.Project_managementService h1 {
+  margin: 10px 0;
+  color: #088f8f;
+}
+#webdevelope_service_heading p {
+  width: 60%;
+  padding: 10px 0;
+  margin: auto;
+}
+.webdevelopement_services,
+.csd_services {
+  display: flex;
+  width: 90%;
+  margin: 40px auto;
+}
+.webdevelopement_services > div {
+  width: 50%;
+  margin: 40px 30px;
+}
+
+.ketDiffrnt_service {
+  margin: 40px auto;
+}
+.ketDiffrnt_service h2 {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+#ketDiffrnt_service {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 10px auto 80px auto;
+}
+#ketDiffrnt_service > div {
+  width: 24%;
+  border-radius: 6px;
+  background-color: #c0c0c0;
+  padding: 10px 13px;
+}
+#ketDiffrnt_service > div h3 {
+  padding-bottom: 10px;
+  color: #088f8f;
+}
+.h_v_wrk {
+  margin: 40px auto 80px auto;
+}
+.h_v_wrk_heading h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.work_methods_service {
+  display: flex;
+  width: 80%;
+  margin: 40px auto;
+  position: relative;
+}
+.work_methods_service > div {
+  width: 50%;
+  padding: 50px 30px 20px 50px;
+  position: relative;
+}
+.work_methods_service > div h2 {
+  color: #088f8f;
+  padding-bottom: 10px;
+}
+.work_methods_service span {
+  font-size: 140px;
+  opacity: 0.3;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+}
+
+#C_software_develope_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://static.fibre2fashion.com/articleresources/images/11/1070/custom-software-development-checklist.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.csd_services,
+#Csoftware_DService {
+  position: relative;
+}
+.csd_services > div span {
+  color: #088f8f;
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  left: 5px;
+}
+.csd_services h3 {
+  padding: 10px 0 15px 0;
+}
+.csd_services {
+  width: 90%;
+  margin: 60px auto;
+  position: relative;
+}
+.csd_services > div {
+  width: 33%;
+  position: relative;
+  padding: 20px 30px;
+}
+
+#S_DE {
+  margin: 80px auto;
+  width: 60%;
+  text-align: center;
+}
+#S_D_cycle {
+  margin: 80px auto;
+  text-align: center;
+  width: 100%;
+}
+#S_D_cycle h1,
+#S_DE h1 {
+  margin: 10px 0 15px 0;
+}
+#S_D_cycle p {
+  width: 70%;
+  margin: auto;
+}
+.C_software_d_cycle {
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.C_software_d_cycle > div {
+  margin: 40px 0;
+}
+.C_software_d_cycle > div h3 {
+  padding: 10px 0 13px 0;
+  color: #088f8f;
+  text-align: left;
+}
+.C_software_d_cycle > div ul {
+  padding-left: 15px;
+  text-align: left;
+}
+.C_software_d_cycle > div ul li {
+  list-style: none;
+}
+.WHY_US {
+  width: 70%;
+  margin: 60px auto;
+}
+.WHY_US :nth-child(1) h2 {
+  font-size: 30px;
+}
+.WHY_US :nth-child(1) h3 {
+  font-size: 25px;
+}
+.WHY_US :nth-child(1) h2,
+.WHY_US :nth-child(1) h3 {
+  padding: 5px 0 7px 0;
+}
+.list_C_S_D {
+  margin: 20px 0;
+}
+.list_C_S_D ul li {
+  list-style: none;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+}
+.list_C_S_D ul span {
+  color: #088f8f;
+  padding-right: 8px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#Digital_marketing_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://www.branddaddigital.com/wp-content/uploads/2020/05/AdobeStock_323829966-scaled-e1590769508276.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bestForYou_service,
+.Mobile_app_developBox {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 80px auto;
+}
+.bestForYou_service img,
+.Mobile_app_developBox .MobileImg img {
+  width: 100%;
+}
+.MobileImg {
+  width: 100%;
+}
+.bestForYou_service .content_box {
+  padding: 0 0 0 30px;
+}
+.bestForYou_service .content_box h2 {
+  color: #088f8f;
+  padding-bottom: 10px;
+}
+.bestForYou_service .content_box h1 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.bestForYou_service .content_box p {
+  padding-bottom: 18px;
+}
+.colouredBox_work {
+  background-color: #c0c0c0;
+  width: 100%;
+  margin: 40px auto 80px auto;
+  padding: 40px 20px;
+}
+.Hw_weWrk {
+  text-align: center;
+  padding: 10px 0;
+}
+.steps_work {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+}
+.steps_work > div {
+  padding: 10px 20px;
+}
+.Hw_weWrk h2 {
+  color: #088f8f;
+}
+.BenifitsOfDM {
+  margin: 60px auto;
+}
+.BenifitsOfDM h1 {
+  font-size: 30px;
+  color: #088f8f;
+}
+.BenifitsOfDM ul {
+  padding: 20px 60px 20px 0;
+}
+.BenifitsOfDM ul li {
+  list-style: none;
+  padding: 4px 0;
+}
+
+#Mobile_application_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://production-cci-com.imgix.net/blog/media/2021-01-20-MobileApps.jpg?ixlib=rb-3.2.1&w=2000&auto=format&fit=max&q=60&ch=DPR%2CWidth%2CViewport-Width%2CSave-Data");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.MobileContent {
+  width: 100%;
+  margin: 20px auto;
+}
+.MobileContent p {
+  padding: 20px 30px 20px 0;
+}
+.We_offer_mobile_app,
+.mobile_app_platforms {
+  width: 90%;
+  margin: 40px auto;
+}
+.We_offer_mobile_app h1,
+.mobile_app_platforms h1 {
+  color: #088f8f;
+  padding-bottom: 15px;
+}
+.We_offer_mobile_app h3 {
+  padding-bottom: 10px;
+}
+.We_offer_mobile_app ul,
+.mobile_app_platforms ul {
+  padding: 10px 0 10px 11px;
+}
+.mobile_app_platforms ul li,
+.We_offer_mobile_app ul li {
+  list-style: none;
+  padding: 4px 0;
+}
+.bottom_para_M_AD {
+  padding: 20px 0;
+  width: 90%;
+}
+
+#Business_Intelligence_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://www.pathwaysinternational.com/wp-content/uploads/2018/06/Big-data-analytics-solutions.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+.Business_IntelligenceBox,
+.Business_intelligence_services {
+  margin: 80px auto;
+  width: 80%;
+}
+.Business_IntelligenceContent p {
+  padding: 20px 0;
+}
+.Business_IntelligenceImg {
+  margin: 20px auto 60px auto;
+  width: 70%;
+  height: 60vh;
+}
+.Business_IntelligenceImg img {
+  width: 100%;
+  height: 100%;
+}
+.Business_intelligence_services h1 {
+  padding: 10px 0 15px 0;
+  color: #088f8f;
+  text-align: center;
+  font-size: 30px;
+}
+.B_I_offers {
+  margin: 40px auto 60px auto;
+  width: 80%;
+}
+.B_I_offers h3 {
+  color: #088f8f;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.B_I_offers ul li {
+  padding: 0 0 10px 0;
+  list-style: none;
+  position: relative;
+  color: #088f8f;
+}
+/* .B_I_offers ul li::before {
+  position: absolute;
+  content: "\f10c";
+  font-family: fontawesome;
+  line-height: 0;
+  font-size: 14px;
+  left: -4px;
+  top: 12px;
+  color: #088f8f;
+} */
+.B_I_offers ul {
+  padding-left: 5px;
+}
+.B_I_offers ul p {
+  padding-bottom: 20px;
+}
+.B_I_offers ul li {
+  font-weight: bold;
+}
+
+#Project_management_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://www.m-inc.com/content/uploads/2017/09/Image-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+#Testing_support_service {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("https://uxdworld.com/wp-content/uploads/2018/04/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.About_Project_management,
+.ProjectManagement_flex,
+.P_M_services {
+  margin: 60px auto;
+  width: 60%;
+}
+.ProjectManagement_flex h1 {
+  font-size: 33px;
+  color: #088f8f;
+}
+.ProjectManagement_flex > div {
+  margin: 60px 0;
+}
+.ProjectManagement_flex p {
+  padding-top: 10px;
+}
+.ProjectManagement_flex .ProjectManagement_img {
+  margin: 10px 0 60px 0;
+}
+.ProjectManagement_flex .ProjectManagement_img img {
+  width: 100%;
+  height: 60vh;
+}
+.P_M_heading h3 {
+  padding: 10px 0 20px 0;
+}
+.services_P_M h2 {
+  color: #088f8f;
+  padding: 5px 0 13px 0;
+}
+.Best_software_box,
+.Testing_services_box {
+  margin: 60px auto;
+  width: 60%;
+}
+.Quality_box_service {
+  width: 90%;
+  margin: 20px auto;
+}
+.Quality_box_service {
+  width: 80%;
+  margin: 60px auto;
+}
+.Quality_box_service .QltCntrl_service h2 {
+  padding: 10px 0 13px 0;
+  color: #088f8f;
+}
+.QltCntrl_service p {
+  padding-bottom: 20px;
+}
+.Testings_service {
+  width: 100%;
+  display: flex;
+}
+.Manual_testing,
+.Automated_testing {
+  width: 50%;
+  margin: 40px 0;
+  padding: 10px 20px;
+}
+.Manual_testing h3,
+.Automated_testing h3 {
+  padding-bottom: 15px;
+  text-align: center;
+  color: #088f8f;
+}
+.Manual_testing ul,
+.Automated_testing ul {
+  padding-top: 15px;
+}
+.Manual_testing ul li,
+.Automated_testing ul li {
+  padding: 0 0 6px 0;
+  list-style: none;
+}
+.Qlty_solutions {
+  width: 90%;
+  margin: 60px auto;
+}
+.Qlty_solutions h3 {
+  color: #088f8f;
+  padding-bottom: 10px;
+}
+.Qlty_solutions_flex {
+  display: flex;
+  margin: 30px 0;
+}
+.Qlty_solutions_flex > div {
+  width: 33%;
+  padding: 10px 20px;
+}
+.Qlty_solutions_flex > div h2 {
+  padding-bottom: 10px;
+}
+.Qlty_solutions_flex .Focus_para {
+  padding: 20px 0 15px 0;
+}
+.Qlty_solutions_flex ul li {
+  margin: 0 0 5px 15px;
+  list-style: none;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  #Services_header,
+  #About_header,
+  #Contact_header {
+    height: 37vh;
+  }
+
+  .left_arrow,
+  .right_arrow {
+    padding: 3px 8px;
+    font-size: 16px;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+  .sticky .container,
+  .sticky .container_header_services,
+  .sticky .container_header_contact,
+  .sticky .container_header_about {
+    height: 60px;
+  }
+  .image_cont_slider {
+    height: 40vh;
+  }
+  .nav_menu ul .services_down li {
+    width: 180px;
+    font-size: 10px;
+    padding: 5px 0 5px 15px;
+    margin-left: -35px;
+  }
+  .nav_menu ul .product_down li {
+    width: 155px;
+    padding: 2px 0 6px 15px;
+
+    margin-left: -35px;
+  }
+  .nav_menu ul .services_down,
+  .nav_menu ul .product_down {
+    top: 14px;
+  }
+  .image_cont_slider .carousel_item .carousel-caption {
+    padding: 23% 12% 0 12%;
+  }
+
+  .carousel-caption .welcome_ket {
+    font-size: 16px;
+  }
+  .carousel-caption h1 {
+    padding-bottom: 3px;
+  }
+  .carousel-caption .Exclnc_One {
+    font-size: 10px;
+  }
+  .carousel-caption h1 {
+    font-size: 15px;
+  }
+  .carousel-caption h3 {
+    font-size: 10px;
+    padding: 0 10px 3px 10px;
+  }
+  .carousel-caption p {
+    font-size: 8px;
+    word-spacing: 1px;
+    padding-top: 5px;
+  }
+  .services_main {
+    padding: 5px 0;
+    margin: 15px auto;
+  }
+  .services_h1 h1,
+  .expertise_box h1 {
+    font-size: 18px;
+  }
+  .services_h1 p {
+    font-size: 9px;
+    padding: 5px 30px;
+  }
+  .Row_6,
+  .Row_5 {
+    margin: 10px 5px;
+  }
+  .Row_6 #icon_Main_Box,
+  .Row_5 #icon_Main_Box {
+    margin: 10px 5px;
+    height: 90px;
+    width: 152px;
+  }
+  .Row_6 .icon-box,
+  .Row_5 .icon-box {
+    margin: 10px 5px;
+    height: 216px;
+    width: 152px;
+    border-radius: 4px;
+  }
+  .Row_6 #icon_Main_Box {
+    height: 185px !important;
+  }
+  .icon-box .icon {
+    margin: 0 4px 0 1px;
+  }
+  .icon img {
+    height: 25px;
+  }
+  .icon-box .title {
+    top: 12px;
+    font-size: 8px;
+  }
+  .icon-box .description {
+    font-size: 7px;
+    top: 26px;
+  }
+  .icon-box .IT_description,
+  .icon-box .CSD_description {
+    top: 39px;
+  }
+  .services_btn button,
+  .about_btn button {
+    padding: 5px;
+    width: 85px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .about_box,
+  .about_values,
+  .why_us {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 99%;
+    padding: 8px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 40px auto;
+  }
+  .left_about,
+  .right_about {
+    width: 100%;
+  }
+  .left_about h2,
+  .about_design h3,
+  .about_qlt_asrnce h3 {
+    color: #088f8f;
+    font-size: 11px;
+  }
+  .left_about h1 {
+    color: #08192b;
+    padding: 6px 0 10px 0;
+    font-size: 15px;
+  }
+  .left_about p {
+    padding: 2px 0;
+    margin-right: 10px;
+    font-size: 8px;
+  }
+  .expertise_box {
+    margin: 10px 0 50px 0;
+  }
+  .expertise_box h1 {
+    padding: 10px 0;
+  }
+  .our_expertise_slides {
+    margin: 10px auto 20px auto;
+    width: 98%;
+  }
+  .our_expertise_slides > div {
+    width: 30%;
+    height: 150px;
+    padding: 6px 0;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  .our_expertise_slides > div img {
+    height: 25px;
+  }
+  .our_expertise_slides > div h3 {
+    font-size: 9px;
+    padding: 6px 0;
+  }
+  .our_expertise_slides > div p {
+    font-size: 7px;
+    padding: 5px;
+  }
+  .footer_main {
+    width: 100%;
+    padding: 40px 30px;
+  }
+  .footer_main h2 {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+  .footer_main .links_footer ul a li {
+    font-size: 8px;
+  }
+  .links_footer ul a li .fas {
+    font-size: 7px;
+  }
+  .col_contact_EC {
+    height: 105px;
+  }
+  .footer_main .fas {
+    padding-right: 1px;
+  }
+  .services_footer {
+    text-align: left;
+  }
+  .services_footer ul {
+    padding-left: 0;
+    display: none;
+  }
+  .services_footer li,
+  .contact_footer li {
+    margin: 3px 0;
+    font-size: 8px;
+    padding: 2px 0;
+  }
+  .Ket_footer p {
+    padding: 2px 0 5px 0;
+    font-size: 7px;
+  }
+  .social_links_ftr .fab {
+    font-size: 10px;
+    margin-top: 5px;
+    border-radius: 1.2px;
+    padding: 2.5px 2.5px 1px 2.5px;
+  }
+  .copy_ket_footer {
+    padding: 10px;
+  }
+  .copy_ket_footer p {
+    font-size: 8px;
+  }
+  .ContactUs_h1 h1,
+  .AboutUs_h1 h1 {
+    padding-top: 40%;
+    font-size: 16px;
+  }
+  .about_value_right {
+    margin-top: 0;
+    padding-left: 0;
+  }
+  .about_value_ h2,
+  .about_value_ h1 {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+  .about_value_ p {
+    font-size: 8px;
+    padding: 10px 10px 10px 10px;
+  }
+  .Values_description h2,
+  .about_value_ h2,
+  .about_value_ h1 {
+    font-size: 12px;
+  }
+  .Values_description p {
+    font-size: 8px;
+  }
+  .Values_description {
+    padding: 5px;
+    bottom: -50px;
+    height: 120px;
+  }
+  .Values_description h2 {
+    padding-bottom: 5px;
+  }
+  .Value_box_flex {
+    width: 95%;
+    margin: 20px auto 40px auto;
+  }
+  .values_Boxes {
+    margin-bottom: 40px;
+    padding: 0 5px;
+  }
+  #Value_img {
+    position: relative;
+    margin-left: -10px;
+    overflow: hidden;
+    width: calc(100% + 20px);
+  }
+  .values_Boxes #Value_img img {
+    width: 90%;
+    height: 18vh;
+  }
+  .values_icons :nth-child(1) {
+    margin: 0px 5px 0px 0px;
+    height: 15px;
+  }
+  .left_about_ h2 {
+    padding-bottom: 8px;
+  }
+  .about_why {
+    padding-right: 0;
+  }
+  .left_about {
+    padding: 5px 0;
+  }
+  .why_img,
+  .about_why {
+    width: 100%;
+  }
+  .why_ket h1 {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+  .reasons h3 {
+    font-size: 13px;
+    padding: 7px 0;
+  }
+  .reasons p {
+    font-size: 8px;
+  }
+  .container_contact .contact_row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    margin: 20px 0;
+    border-radius: 3px;
+  }
+  .col_left_contact {
+    width: 95%;
+    text-align: center;
+    margin: 10px;
+  }
+  .col_contact_EC img,
+  .col_location img {
+    height: 25px;
+  }
+  .info_box_lctn h3,
+  .info-box h3 {
+    font-size: 14px;
+  }
+  .info_box_lctn p,
+  .col_contact_EC p {
+    font-size: 10px;
+  }
+  .col_contact_EC,
+  .info_box_lctn {
+    padding: 17px 10px;
+    border-radius: 4px;
+  }
+  .col_right_contact {
+    width: 100%;
+  }
+  .col_right_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 5px;
+  }
+  .form_row,
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    width: 92%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .col_right_contact input,
+  .col_right_contact textarea {
+    width: 85%;
+    border-radius: 2px;
+    font-size: 8px;
+    border: 1px solid rgba(29, 42, 68, 0.548);
+    padding: 5px;
+    margin: 8px;
+    outline: none;
+  }
+  .contact_btn button {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 8px 0;
+    font-size: 10px;
+  }
+  .map_Location {
+    width: 95%;
+    margin: 30px auto 50px auto;
+    padding: 10px 5px;
+  }
+  .map_Location iframe {
+    height: 200px;
+  }
+  .Services_h1 h1 {
+    font-size: 13px;
+    padding-bottom: 5px;
+  }
+  .Services_h1 p {
+    font-size: 8px;
+    color: #fff;
+    text-align: center;
+    padding: 5px 45px;
+    font-weight: 100;
+  }
+  .Services_h1 {
+    padding-top: 26%;
+  }
+  .icon-box a button {
+    position: absolute;
+    right: 46px;
+    bottom: 10px;
+    background-color: #088f8f;
+    color: #fff;
+  }
+  .icon-box button {
+    padding: 3px 5px;
+    width: 60px;
+    border-radius: 3px;
+    font-size: 8px;
+    margin-top: 8px;
+  }
+  .footer_main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links_footer,
+  .Ket_footer,
+  .services_footer,
+  .contact_footer {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .info_box_lctn .fas {
+    padding: 5px 8px !important;
+  }
+  .info_box_lctn .fas,
+  .col_contact_EC .fas {
+    font-size: 22px;
+
+    padding: 5px;
+  }
+  .Ket_footer a {
+    padding: 0 5px 0 0;
+  }
+  #Serviceone_header,
+  #staffaug,
+  #cyberSecurity_service,
+  #webDevelope_service,
+  #C_software_develope_service,
+  #Digital_marketing_service,
+  #Mobile_application_service,
+  #Business_Intelligence_service,
+  #Project_management_service,
+  #Testing_support_service,
+  #itCunslt_training {
+    height: 30vh;
+  }
+
+  /* headers */
+
+  .cloud_service {
+    top: 15%;
+    width: 70%;
+  }
+  .staffService h1,
+  .cloud_service h1,
+  .benifits_staffService h1,
+  .itCunslt_trainingService h1,
+  .cyber_securityService h1,
+  .web_developeService h1,
+  .C_software_developeService h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .Project_managementService h1 {
+    font-size: 14px;
+  }
+  .web_developeService,
+  .C_software_developeService,
+  .Digital_marketingService,
+  .Mobile_applicationService,
+  .Business_IntelligenceService,
+  .Testing_supportService,
+  .Project_managementService,
+  .itCunslt_trainingService {
+    top: 30%;
+    left: 13.5%;
+    width: 70%;
+  }
+  #webdevelope_service_heading,
+  .Csoftware_Dservice_heading {
+    margin: 20px;
+  }
+  #webdevelope_service_heading p {
+    width: 85%;
+    padding: 5px 0;
+    font-size: 8px;
+  }
+  .webdevelopement_services,
+  .csd_services {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .webdevelopement_services > div {
+    width: 50%;
+    margin: 15px 2px;
+  }
+  .webdevelopement_services h2 {
+    font-size: 12px !important;
+  }
+  #webdevelope_service_heading h1,
+  .webdevelopement_services h2,
+  .Csoftware_Dservice_heading h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .itCunslt_trainingService h1,
+  .Project_managementService h1 {
+    margin: 5px 0;
+    color: #088f8f;
+    font-size: 14px;
+  }
+  .sticky .container a,
+  .sticky .container_header_services a,
+  .sticky .container_header_contact a,
+  .sticky .container_header_about a {
+    color: #08192b;
+  }
+  .cloud_service p,
+  .cyber_securityService h2 {
+    font-size: 8px;
+    padding-top: 0;
+  }
+  .cloud_reason h2,
+  .whystaffService h2,
+  #helpC_S h3 {
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 6px;
+  }
+  .cloud_reason {
+    margin: 30px auto;
+    width: 85%;
+  }
+  .cloud_reason p,
+  .whystaffService p {
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .cloud_reasons {
+    margin: 15px auto;
+
+    font-size: 10px;
+    width: 85%;
+  }
+  .cloud_reasons > div {
+    margin-left: 10px;
+  }
+  .cloud_reasons ol li {
+    line-height: 15px;
+    padding: 3px 0;
+    list-style-type: square;
+  }
+  .cloud_Services h1,
+  .cloud_Exp h1 {
+    font-size: 14px;
+  }
+  .cloudServices_flex,
+  .staff_paras,
+  .whystaffService,
+  .benifits_staffService {
+    margin: 25px 0;
+  }
+  .cloudServices_flex > div {
+    width: 45%;
+  }
+  .cloudServices_flex > div h2,
+  .C_S_flex_service > div h2 {
+    margin: 6px 0;
+    font-size: 11px;
+  }
+  .cloudServices_flex > div p {
+    font-size: 8px;
+    padding: 5px 0;
+  }
+  .cloudServices_flex > div ul li {
+    line-height: 18px;
+    margin-left: 8px;
+    list-style: none;
+    font-size: 8px;
+    padding-top: 3px;
+  }
+  .cloud_Exp {
+    margin: 6px auto 30px auto;
+  }
+  .cloud_Exp h1 {
+    padding: 0px 0 10px 0;
+    line-height: 20px;
+  }
+  .cloud_Exp .exp_paras {
+    margin: 10px;
+    padding: 0 7px;
+  }
+  .cloud_Exp .exp_paras p {
+    border-left: 2px solid #088f8f;
+    padding-left: 6px;
+    font-size: 8px;
+  }
+  .staff_paras ul {
+    width: 85%;
+  }
+  .staff_paras ul li {
+    padding-bottom: 8px;
+    font-size: 8px;
+  }
+  .whystaffService ul li,
+  .benifits_staffService ul li {
+    width: 85%;
+    margin: 6px auto;
+    font-size: 8px;
+  }
+  .benifits_staffService p {
+    width: 85%;
+    margin: 6px auto;
+  }
+  .staffService p,
+  .benifits_staffService p,
+  .itCunslt_trainingService p,
+  .web_developeService p,
+  .C_software_developeService p {
+    padding: 5px 0 5px 0;
+    font-size: 8px;
+  }
+  .C_S_flex_service > div {
+    width: 85%;
+    margin: 5px 0 10px 0;
+  }
+  #helpC_S {
+    text-align: center;
+    margin: 25px 0 15px 0;
+  }
+  .C_S_flex_service p,
+  .Wa_v_Do p,
+  .Wa_v_Do_flex p,
+  .securt_box p,
+  .webdevelopement_services p,
+  #ketDiffrnt_service p,
+  .work_methods_service p,
+  .csd_services p,
+  #S_DE p,
+  .WHY_US p,
+  .steps_work p,
+  .Business_intelligence_services p,
+  .About_Project_management p,
+  .ProjectManagement_flex p,
+  .P_M_services p,
+  .Manual_testing p,
+  .Automated_testing p,
+  .Qlty_solutions p {
+    font-size: 8px;
+  }
+
+  #S_D_cycle p {
+    width: 85%;
+    font-size: 8px;
+  }
+  .services_P_M p {
+    font-size: 8px;
+  }
+
+  /* paras */
+
+  .Wa_v_Do {
+    width: 90%;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px auto 20px auto;
+  }
+  .Wa_v_Do h2 {
+    padding: 0 0 5px 0;
+    font-size: 11px;
+  }
+  .Wa_v_Do_flex {
+    width: 90%;
+    margin: 20px auto;
+    border-top: 1px solid #088f8f;
+    padding-top: 5px;
+  }
+  .Wa_v_Do_flex > div h4 {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+  .Wa_v_Do_flex > div {
+    margin: 10px 2px;
+  }
+  .securt_box h2 {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .securt_box h4 {
+    padding-bottom: 5px;
+    font-size: 10px;
+  }
+  .securt_box {
+    width: 85%;
+    margin: 25px auto;
+  }
+  .securt_box ol li {
+    padding-top: 4px;
+    font-size: 8px;
+  }
+  .securt_box ol {
+    margin-left: 9px;
+    padding-top: 10px;
+  }
+  .ketDiffrnt_service {
+    margin: 15px auto;
+  }
+  .ketDiffrnt_service h2 {
+    margin: 10px 0 20px 0;
+    font-size: 13px;
+  }
+  #ketDiffrnt_service > div {
+    border-radius: 3px;
+    padding: 4px 3px;
+  }
+  #ketDiffrnt_service {
+    margin: 5px auto 35px auto;
+  }
+  #ketDiffrnt_service > div h3 {
+    padding-bottom: 6px;
+    font-size: 9px;
+  }
+  .h_v_wrk {
+    margin: 20px auto;
+  }
+  .STAFF_AUG {
+    top: 25%;
+    width: 70%;
+  }
+  .Best_software_box h3,
+  .Testing_services_box h1,
+  .QltCntrl_service h2,
+  .Best_software_box h1 {
+    font-size: 12px;
+  }
+  .StaffAug_service p {
+    font-size: 8px;
+    padding-top: 3px;
+  }
+  .work_methods_service {
+    width: 85%;
+    margin: 16px auto;
+  }
+  .work_methods_service > div {
+    padding: 1px 5px 5px 10px;
+  }
+  .h_v_wrk_heading h1 {
+    font-size: 14px;
+  }
+  .work_methods_service > div h2 {
+    padding-bottom: 2px;
+    font-size: 9px;
+  }
+  .work_methods_service span {
+    font-size: 35px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 90px;
+    left: -9px;
+  }
+  .csd_services > div span {
+    font-size: 8px;
+    left: 5px;
+  }
+  .csd_services > div {
+    padding: 6px 5px;
+  }
+  .csd_services h3 {
+    padding: 5px 0 7px 0;
+    font-size: 9px;
+  }
+  #S_DE {
+    margin: 20px auto;
+    width: 85%;
+  }
+  #S_D_cycle h1,
+  #S_DE h1 {
+    margin: 5px 0 7px 0;
+    font-size: 12px;
+  }
+  #S_D_cycle {
+    margin: 25px auto;
+    text-align: center;
+    width: 100%;
+  }
+  .C_software_d_cycle {
+    margin: 10px auto;
+  }
+  .C_software_d_cycle > div h3 {
+    padding: 5px 0 8px 0;
+
+    font-size: 11px;
+  }
+  .C_software_d_cycle > div {
+    margin: 15px 0 0 4px;
+  }
+  .C_software_d_cycle > div ul li {
+    list-style: none;
+    font-size: 8px;
+  }
+  .C_software_d_cycle > div ul {
+    padding-left: 7px;
+    text-align: left;
+  }
+  .WHY_US {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .WHY_US :nth-child(1) h2 {
+    font-size: 14px;
+  }
+  .WHY_US :nth-child(1) h3 {
+    font-size: 12px;
+  }
+  .list_C_S_D {
+    margin: 7px 0;
+  }
+  .list_C_S_D ul span {
+    padding-right: 4px;
+    font-size: 8px;
+  }
+  .list_C_S_D ul li {
+    padding: 2px 0;
+    font-size: 8px;
+  }
+  .bestForYou_service,
+  .Mobile_app_developBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: 20px auto;
+  }
+  .bestForYou_service .content_box h2 {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .bestForYou_service .content_box h1 {
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+  .bestForYou_service .content_box {
+    padding: 0px 0 0 10px;
+    width: 100%;
+  }
+  .bestForYou_service .D_Mimg {
+    width: 95%;
+  }
+
+  .bestForYou_service .content_box p {
+    padding-bottom: 5px;
+    font-size: 8px;
+  }
+  .colouredBox_work {
+    margin: 20px auto 35px auto;
+    padding: 10px 5px;
+  }
+  .Hw_weWrk h2 {
+    font-size: 12px;
+  }
+  .Best_software_box p,
+  .Testing_services_box p {
+    padding-bottom: 10px;
+    font-size: 8px;
+  }
+  .QltCntrl_service p {
+    font-size: 10px;
+  }
+  .steps_work > div {
+    padding: 5px;
+    width: 33.3%;
+  }
+  .steps_work h4 {
+    font-size: 8px;
+  }
+  .steps_work h2 {
+    font-size: 12px;
+  }
+  .BenifitsOfDM {
+    margin: 20px auto 20px 15px;
+  }
+  .BenifitsOfDM h1 {
+    font-size: 13px;
+    color: #088f8f;
+  }
+  .BenifitsOfDM ul li {
+    list-style: none;
+    padding: 2px 0;
+    font-size: 8px;
+  }
+  .BenifitsOfDM ul {
+    padding: 3px 8px 8px 8px;
+  }
+  .MobileContent p {
+    padding: 5px 8px 8px 5px;
+    font-size: 8px;
+  }
+  .We_offer_mobile_app,
+  .mobile_app_platforms {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .We_offer_mobile_app h3 {
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+  .We_offer_mobile_app h1,
+  .mobile_app_platforms h1 {
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+  .mobile_app_platforms ul li,
+  .We_offer_mobile_app ul li {
+    padding: 2px 0;
+    font-size: 8px;
+  }
+  .bottom_para_M_AD p {
+    font-size: 8px;
+  }
+  .Business_IntelligenceBox,
+  .Business_intelligence_services {
+    margin: 20px auto;
+    width: 90%;
+  }
+  .Business_IntelligenceContent p {
+    padding: 4px 0;
+    font-size: 8px;
+  }
+  .Business_IntelligenceImg {
+    margin: 10px auto 30px auto;
+    width: 90%;
+    height: 30vh;
+  }
+  .Project_managementService p {
+    font-size: 8px;
+  }
+  .ProjectManagement_flex > div {
+    margin: 30px 0;
+  }
+  .Business_intelligence_services h1 {
+    padding: 5px 0 8px 0;
+
+    font-size: 13px;
+  }
+  .B_I_offers h3 {
+    padding-bottom: 6px;
+    font-size: 12px;
+  }
+  .B_I_offers ul li::before {
+    font-size: 7px;
+    left: -2px;
+    top: 7px;
+  }
+  .B_I_offers ul li {
+    padding: 0 0 5px 0;
+    font-size: 10px;
+  }
+  .B_I_offers ul p {
+    padding-bottom: 5px;
+    font-size: 8px;
+  }
+  .About_Project_management,
+  .ProjectManagement_flex,
+  .P_M_services {
+    margin: 20px auto 5px auto;
+    width: 85%;
+  }
+  .ProjectManagement_flex h1 {
+    font-size: 12px;
+  }
+  .ProjectManagement_flex .ProjectManagement_img {
+    margin: 5px 0 25px 0;
+  }
+  .ProjectManagement_flex .ProjectManagement_img img {
+    width: 100%;
+    height: 30vh;
+  }
+  .P_M_heading h3 {
+    padding: 5px 0 10px 0;
+    font-size: 11px;
+  }
+  .services_P_M h2 {
+    color: #088f8f;
+    padding: 2px 0 4px 0;
+    font-size: 10px;
+  }
+  .Best_software_box,
+  .Testing_services_box {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .Quality_box_service {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .Manual_testing,
+  .Automated_testing {
+    margin: 5px 0;
+    padding: 3px;
+  }
+  .Manual_testing h3,
+  .Automated_testing h3 {
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 9px;
+  }
+  .Qlty_solutions {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .itconsult_flex {
+    width: 95%;
+    margin: 20px auto 40px auto;
+  }
+  .itconsult_flex > div {
+    width: 50%;
+    margin: 5px 3px;
+  }
+  .itconsult_flex > div h1 {
+    color: #088f8f;
+    padding: 3px 0 8px 0;
+    font-size: 11px;
+  }
+  .itconsult_flex > div p {
+    padding-bottom: 8px;
+    font-size: 8px;
+  }
+  .itconsult_flex > div ul li {
+    list-style: none;
+    padding-bottom: 2px;
+    font-size: 8px;
+  }
+  .itconsult_flex > div ul {
+    margin-left: 8px;
+  }
+  .Manual_testing ul li,
+  .Automated_testing ul li {
+    padding: 0 0 4px 0;
+    list-style: none;
+    font-size: 8px;
+  }
+  .Qlty_solutions h3 {
+    color: #088f8f;
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+  .Qlty_solutions_flex > div {
+    width: 33%;
+    padding: 3px;
+  }
+  .Qlty_solutions_flex .Focus_para {
+    padding: 4px 0;
+  }
+  .Qlty_solutions_flex > div h2 {
+    padding-bottom: 5px;
+    font-size: 9px;
+  }
+  .Qlty_solutions_flex ul li {
+    margin: 0 0 2px 8px;
+    list-style: none;
+    font-size: 8px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 720px) {
+  #Services_header,
+  #About_header,
+  #Contact_header {
+    height: 33vh;
+  }
+  .left_arrow,
+  .right_arrow {
+    padding: 4px 10px;
+    font-size: 18px;
+  }
+  .prev {
+    left: 15px;
+  }
+  .next {
+    right: 15px;
+  }
+  .sticky .container,
+  .sticky .container_header_services,
+  .sticky .container_header_contact,
+  .sticky .container_header_about {
+    height: 52px;
+  }
+  .image_cont_slider {
+    height: 55vh;
+  }
+  .nav_menu ul .services_down li {
+    width: 180px;
+    font-size: 10px;
+    padding: 5px 0 5px 15px;
+    margin-left: -35px;
+  }
+  .nav_menu ul .product_down li {
+    width: 155px;
+    padding: 2px 0 6px 15px;
+    margin-left: -35px;
+  }
+  .nav_menu ul .services_down,
+  .nav_menu ul .product_down {
+    top: 14px;
+  }
+  .image_cont_slider .carousel_item .carousel-caption {
+    padding: 17% 8% 0 8%;
+  }
+  .carousel-caption .welcome_ket {
+    font-size: 19px;
+  }
+  .carousel-caption .Exclnc_One {
+    font-size: 13px;
+  }
+  .carousel-caption h1 {
+    font-size: 16px;
+    padding: 2px 0;
+  }
+  .carousel-caption h3 {
+    font-size: 12px;
+    padding: 0 15px 5px 15px;
+  }
+  .carousel-caption p {
+    font-size: 10px;
+    word-spacing: 1px;
+    padding-top: 5px;
+  }
+  .services_main {
+    padding: 7px 0;
+    margin: 20px auto;
+  }
+  .services_h1 h1,
+  .expertise_box h1 {
+    font-size: 25px;
+  }
+  .services_h1 p {
+    font-size: 11px;
+    padding: 6px 25px;
+  }
+  .Row_6,
+  .Row_5 {
+    margin: 0 6px;
+  }
+  .Row_6 .icon-box,
+  .Row_5 .icon-box {
+    margin: 12px 6px;
+    height: 213px;
+    width: 200px;
+  }
+  .Row_6 #icon_Main_Box {
+    height: 180px !important;
+  }
+  .icon-box .icon {
+    margin: 0 5px 0 5px;
+  }
+  .icon img {
+    height: 28px;
+  }
+  .icon-box .title {
+    top: 13px;
+    font-size: 10px;
+  }
+  .icon-box .description {
+    font-size: 8px;
+    top: 30px;
+  }
+  .services_btn button,
+  .about_btn button {
+    padding: 6px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .about_box,
+  .about_values,
+  .why_us {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 99%;
+    padding: 10px 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 40px auto;
+  }
+  .left_about,
+  .right_about {
+    width: 100%;
+  }
+  .left_about h2,
+  .about_design h3,
+  .about_qlt_asrnce h3 {
+    color: #088f8f;
+    font-size: 17px;
+  }
+  .left_about h1 {
+    color: #08192b;
+    padding: 6px 0 10px 0;
+    font-size: 17px;
+  }
+  .col_contact_EC {
+    height: 120px;
+  }
+  .left_about p {
+    padding: 2px 0;
+    margin-right: 12px;
+    font-size: 10px;
+  }
+  .expertise_box {
+    margin: 10px 0 50px 0;
+  }
+  .expertise_box h1 {
+    padding: 10px 0;
+  }
+  .our_expertise_slides {
+    margin: 10px auto 20px auto;
+    width: 98%;
+  }
+  .our_expertise_slides > div {
+    width: 30%;
+    height: 170px;
+    padding: 6px 0;
+    border-radius: 4px;
+    margin: 7px;
+  }
+  .our_expertise_slides > div img {
+    height: 32px;
+  }
+  .our_expertise_slides > div h3 {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+  .our_expertise_slides > div p {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .footer_main {
+    width: 100%;
+    padding: 40px 5px;
+  }
+  .footer_main h2 {
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+
+  .footer_main .links_footer ul a li {
+    font-size: 9px;
+  }
+  .links_footer ul a li .fas {
+    font-size: 9px;
+  }
+
+  .footer_main .fas {
+    padding-right: 2px;
+  }
+  .services_footer {
+    text-align: left;
+  }
+  .services_footer ul {
+    padding-left: 0;
+  }
+  .services_footer li,
+  .contact_footer li {
+    margin: 3px 0;
+    font-size: 9px;
+    padding: 2px 0;
+  }
+  .Ket_footer p {
+    padding: 2px 0 5px 0;
+    font-size: 9px;
+  }
+  .social_links_ftr .fab {
+    font-size: 12px;
+    margin-top: 5px;
+    border-radius: 2px;
+    padding: 3px 3px 2px 3px;
+  }
+  .copy_ket_footer {
+    padding: 10px;
+  }
+  .copy_ket_footer p {
+    font-size: 10px;
+  }
+  .ContactUs_h1 h1,
+  .AboutUs_h1 h1 {
+    padding-top: 30%;
+    font-size: 20px;
+  }
+  .about_value_right {
+    margin-top: 0;
+    padding-left: 0;
+  }
+  .left_about {
+    padding: 10px 0;
+  }
+  .about_value_ h2,
+  .about_value_ h1 {
+    padding: 0 25px 5px 25px;
+    font-size: 16px;
+  }
+  .about_value_ p {
+    font-size: 10px;
+    padding: 12px 20px 12px 20px;
+  }
+  .Values_description h2,
+  .about_value_ h2,
+  .about_value_ h1 {
+    font-size: 14px;
+  }
+  .Values_description p {
+    font-size: 10px;
+  }
+  .Values_description {
+    padding: 15px 10px;
+    bottom: -50px;
+    height: 140px;
+  }
+  .Values_description h2 {
+    padding-bottom: 5px;
+  }
+  .Value_box_flex {
+    width: 95%;
+    margin: 25px auto;
+  }
+  .values_Boxes {
+    margin-bottom: 50px;
+    padding: 0 5px;
+  }
+  #Value_img {
+    position: relative;
+    margin-left: -15px;
+    overflow: hidden;
+    width: calc(100% + 25px);
+  }
+  .values_Boxes #Value_img img {
+    width: 90%;
+    height: 40vh;
+  }
+  .values_icons :nth-child(1) {
+    margin: 0px 7px 0px 0px;
+    height: 28px;
+  }
+  .about_why {
+    padding-right: 0;
+  }
+  .why_img,
+  .about_why {
+    width: 100%;
+  }
+  .why_ket h1 {
+    font-size: 17px;
+    padding: 10px 0;
+  }
+  .reasons h3 {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .reasons p {
+    font-size: 10px;
+  }
+
+  .container_contact .contact_row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    margin: 30px 0;
+    border-radius: 3px;
+  }
+  .col_left_contact {
+    width: 95%;
+    text-align: center;
+    margin: 15px;
+  }
+  .col_contact_EC img,
+  .col_location img {
+    height: 28px;
+  }
+  .info_box_lctn h3,
+  .info-box h3 {
+    font-size: 16px;
+  }
+  .info_box_lctn p,
+  .col_contact_EC p {
+    font-size: 13px;
+  }
+  .col_contact_EC,
+  .info_box_lctn {
+    padding: 20px 15px;
+  }
+  .col_right_contact {
+    width: 100%;
+  }
+  .col_right_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form_row,
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7px auto;
+    width: 92%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .col_right_contact input,
+  .col_right_contact textarea {
+    width: 85%;
+    border-radius: 5px;
+    font-size: 11px;
+    border: 1px solid rgba(29, 42, 68, 0.548);
+    padding: 7px;
+    margin: 6px;
+    outline: none;
+  }
+  .contact_btn button {
+    border-radius: 3px;
+    padding: 6px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .map_Location {
+    width: 95%;
+    margin: 30px auto 50px auto;
+    padding: 10px 5px;
+  }
+  .map_Location iframe {
+    height: 240px;
+  }
+  .Services_h1 h1 {
+    font-size: 16px;
+    padding-bottom: 7px;
+  }
+  .Services_h1 p {
+    font-size: 10px;
+    padding: 5px 70px;
+  }
+  .Services_h1 {
+    padding-top: 12%;
+  }
+  .icon-box button {
+    padding: 4px 6px;
+    background-color: #fff;
+    border: 1px solid #088f8f;
+    width: 85px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-top: 14px;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .icon-box a button {
+    right: 57.5px;
+    bottom: 13px;
+  }
+
+  .icon-box .IT_description,
+  .icon-box .CSD_description {
+    top: 40px;
+  }
+
+  #Footer_flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .links_footer {
+    width: 20%;
+  }
+
+  .Ket_footer,
+  .contact_footer,
+  .services_footer {
+    width: 25%;
+  }
+  .links_footer,
+  .contact_footer {
+    padding-bottom: 30px;
+  }
+  .info_box_lctn .fas {
+    padding: 6px 9px !important;
+  }
+  .info_box_lctn .fas,
+  .col_contact_EC .fas {
+    font-size: 25px;
+    padding: 6px;
+  }
+  #Serviceone_header,
+  #staffaug,
+  #cyberSecurity_service,
+  #webDevelope_service,
+  #C_software_develope_service,
+  #Digital_marketing_service,
+  #Mobile_application_service,
+  #Business_Intelligence_service,
+  #Project_management_service,
+  #Testing_support_service,
+  #itCunslt_training {
+    height: 50vh;
+  }
+
+  /* headers */
+
+  .cloud_service {
+    top: 20%;
+    width: 70%;
+  }
+  .staffService h1,
+  .cloud_service h1,
+  .benifits_staffService h1,
+  .itCunslt_trainingService h1,
+  .cyber_securityService h1,
+  .web_developeService h1,
+  .C_software_developeService h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .Project_managementService h1 {
+    font-size: 16px;
+  }
+  .web_developeService,
+  .C_software_developeService,
+  .Digital_marketingService,
+  .Mobile_applicationService,
+  .Business_IntelligenceService,
+  .Testing_supportService,
+  .Project_managementService,
+  .itCunslt_trainingService {
+    top: 32%;
+    left: 13.5%;
+    width: 70%;
+  }
+  #webdevelope_service_heading,
+  .Csoftware_Dservice_heading {
+    margin: 20px;
+  }
+  #webdevelope_service_heading p {
+    width: 85%;
+    padding: 5px 0;
+    font-size: 10px;
+  }
+  .webdevelopement_services,
+  .csd_services {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .webdevelopement_services > div {
+    width: 50%;
+    margin: 15px 2px;
+  }
+  .webdevelopement_services h2 {
+    font-size: 14px !important;
+  }
+  #webdevelope_service_heading h1,
+  .webdevelopement_services h2,
+  .Csoftware_Dservice_heading h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .itCunslt_trainingService h1,
+  .Project_managementService h1 {
+    margin: 5px 0;
+    color: #088f8f;
+    font-size: 16px;
+  }
+  .sticky .container a,
+  .sticky .container_header_services a,
+  .sticky .container_header_contact a,
+  .sticky .container_header_about a {
+    color: #08192b;
+  }
+  .cloud_service p,
+  .cyber_securityService h2 {
+    font-size: 10px;
+    padding-top: 0;
+  }
+  .cloud_reason h2,
+  .whystaffService h2,
+  #helpC_S h3 {
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 6px;
+  }
+  .cloud_reason {
+    margin: 30px auto;
+    width: 85%;
+  }
+  .cloud_reason p,
+  .whystaffService p {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .cloud_reasons {
+    margin: 15px auto;
+
+    font-size: 12px;
+    width: 85%;
+  }
+  .cloud_reasons > div {
+    margin-left: 10px;
+  }
+  .cloud_reasons ol li {
+    line-height: 15px;
+    padding: 3px 0;
+    list-style-type: square;
+  }
+  .cloud_Services h1,
+  .cloud_Exp h1 {
+    font-size: 16px;
+  }
+  .cloudServices_flex,
+  .staff_paras,
+  .whystaffService,
+  .benifits_staffService {
+    margin: 25px 0;
+  }
+  .cloudServices_flex > div {
+    width: 45%;
+  }
+  .cloudServices_flex > div h2,
+  .C_S_flex_service > div h2 {
+    margin: 6px 0;
+    font-size: 13px;
+  }
+  .cloudServices_flex > div p {
+    font-size: 10px;
+    padding: 5px 0;
+  }
+  .cloudServices_flex > div ul li {
+    line-height: 20px;
+    margin-left: 10px;
+    list-style: none;
+    font-size: 10px;
+    padding-top: 4px;
+  }
+  .cloud_Exp {
+    margin: 6px auto 30px auto;
+  }
+  .cloud_Exp h1 {
+    padding: 0px 0 10px 0;
+    line-height: 20px;
+  }
+  .cloud_Exp .exp_paras {
+    margin: 10px;
+    padding: 0 7px;
+  }
+  .cloud_Exp .exp_paras p {
+    border-left: 2px solid #088f8f;
+    padding-left: 6px;
+    font-size: 10px;
+  }
+  .staff_paras ul {
+    width: 85%;
+  }
+  .staff_paras ul li {
+    padding-bottom: 8px;
+    font-size: 10px;
+  }
+  .whystaffService ul li,
+  .benifits_staffService ul li {
+    width: 85%;
+    margin: 6px auto;
+    font-size: 10px;
+  }
+  .benifits_staffService p {
+    width: 85%;
+    margin: 6px auto;
+  }
+  .staffService p,
+  .benifits_staffService p,
+  .itCunslt_trainingService p,
+  .web_developeService p,
+  .C_software_developeService p {
+    padding: 5px 0 5px 0;
+    font-size: 10px;
+  }
+  .C_S_flex_service > div {
+    width: 85%;
+    margin: 5px 0 10px 0;
+  }
+  #helpC_S {
+    text-align: center;
+    margin: 25px 0 15px 0;
+  }
+  .C_S_flex_service p,
+  .Wa_v_Do p,
+  .Wa_v_Do_flex p,
+  .securt_box p,
+  .webdevelopement_services p,
+  #ketDiffrnt_service p,
+  .work_methods_service p,
+  .csd_services p,
+  #S_DE p,
+  .WHY_US p,
+  .steps_work p,
+  .Business_intelligence_services p,
+  .About_Project_management p,
+  .ProjectManagement_flex p,
+  .P_M_services p,
+  .Manual_testing p,
+  .Automated_testing p,
+  .Qlty_solutions p {
+    font-size: 10px;
+  }
+  #S_D_cycle p {
+    width: 85%;
+    font-size: 10px;
+  }
+  .services_P_M p {
+    font-size: 10px;
+  }
+
+  /* paras */
+
+  .Wa_v_Do {
+    width: 90%;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px auto 20px auto;
+  }
+  .Wa_v_Do h2 {
+    padding: 0 0 5px 0;
+    font-size: 13px;
+  }
+  .Wa_v_Do_flex {
+    width: 90%;
+    margin: 20px auto;
+    border-top: 1px solid #088f8f;
+    padding-top: 5px;
+  }
+  .Wa_v_Do_flex > div h4 {
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+  .Wa_v_Do_flex > div {
+    margin: 10px 2px;
+  }
+  .securt_box h2,
+  .securt_box h4 {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .securt_box {
+    width: 85%;
+    margin: 25px auto;
+  }
+  .securt_box ol li {
+    padding-top: 4px;
+    font-size: 10px;
+  }
+  .securt_box ol {
+    margin-left: 11px;
+    padding-top: 10px;
+  }
+  .ketDiffrnt_service {
+    margin: 15px auto;
+  }
+  .ketDiffrnt_service h2 {
+    margin: 10px 0 20px 0;
+    font-size: 15px;
+  }
+  #ketDiffrnt_service > div {
+    border-radius: 3px;
+    padding: 4px 3px;
+  }
+  #ketDiffrnt_service {
+    margin: 5px auto 35px auto;
+  }
+  #ketDiffrnt_service > div h3 {
+    padding-bottom: 6px;
+    font-size: 11px;
+  }
+  .h_v_wrk {
+    margin: 20px auto;
+  }
+  .STAFF_AUG {
+    top: 25%;
+    width: 70%;
+  }
+  .StaffAug_service p {
+    font-size: 10px;
+    padding-top: 3px;
+  }
+  .work_methods_service {
+    width: 85%;
+    margin: 8px auto;
+  }
+  .work_methods_service > div {
+    padding: 5px 5px 5px 10px;
+  }
+  .h_v_wrk_heading h1 {
+    font-size: 16px;
+  }
+  .work_methods_service > div h2 {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .work_methods_service span {
+    font-size: 40px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 106px;
+    left: -11px;
+  }
+  .csd_services > div span {
+    font-size: 10px;
+    left: 5px;
+  }
+  .csd_services > div {
+    padding: 6px 5px;
+  }
+  .csd_services h3 {
+    padding: 5px 0 7px 0;
+    font-size: 11px;
+  }
+  #S_DE {
+    margin: 20px auto;
+    width: 85%;
+  }
+  #S_D_cycle h1,
+  #S_DE h1 {
+    margin: 5px 0 7px 0;
+    font-size: 14px;
+  }
+  #S_D_cycle {
+    margin: 25px auto;
+    text-align: center;
+    width: 100%;
+  }
+  .C_software_d_cycle {
+    margin: 10px auto;
+  }
+  .C_software_d_cycle > div h3 {
+    padding: 5px 0 8px 0;
+
+    font-size: 13px;
+  }
+  .C_software_d_cycle > div {
+    margin: 15px 0 0 4px;
+  }
+  .C_software_d_cycle > div ul li {
+    list-style: none;
+    font-size: 10px;
+  }
+  .C_software_d_cycle > div ul {
+    padding-left: 9px;
+    text-align: left;
+  }
+  .WHY_US {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .WHY_US :nth-child(1) h2 {
+    font-size: 16px;
+  }
+  .WHY_US :nth-child(1) h3 {
+    font-size: 14px;
+  }
+  .list_C_S_D {
+    margin: 7px 0;
+  }
+  .list_C_S_D ul span {
+    padding-right: 4px;
+    font-size: 10px;
+  }
+  .list_C_S_D ul li {
+    padding: 2px 0;
+    font-size: 10px;
+  }
+
+  .bestForYou_service,
+  .Mobile_app_developBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: 20px auto;
+  }
+  .bestForYou_service .content_box h2 {
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+  .bestForYou_service .content_box h1 {
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+  .bestForYou_service .content_box {
+    padding: 0px 0 0 10px;
+  }
+  .bestForYou_service .content_box p {
+    padding-bottom: 5px;
+    font-size: 10px;
+  }
+  .colouredBox_work {
+    margin: 20px auto 35px auto;
+    padding: 10px 5px;
+  }
+  .Hw_weWrk h2 {
+    font-size: 14px;
+  }
+  .steps_work > div {
+    padding: 5px;
+    width: 33.3%;
+  }
+  .steps_work h4 {
+    font-size: 10px;
+  }
+  .steps_work h2 {
+    font-size: 14px;
+  }
+  .BenifitsOfDM {
+    margin: 20px auto;
+  }
+  .BenifitsOfDM h1 {
+    font-size: 15px;
+    color: #088f8f;
+  }
+  .BenifitsOfDM ul li {
+    list-style: none;
+    padding: 2px 0;
+    font-size: 10px;
+  }
+  .BenifitsOfDM ul {
+    padding: 3px 8px 8px 26px;
+  }
+  .MobileContent p {
+    padding: 5px 8px 8px 5px;
+    font-size: 10px;
+  }
+  .We_offer_mobile_app,
+  .mobile_app_platforms {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .We_offer_mobile_app h3 {
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+  .We_offer_mobile_app h1,
+  .mobile_app_platforms h1 {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .mobile_app_platforms ul li,
+  .We_offer_mobile_app ul li {
+    padding: 2px 0;
+    font-size: 10px;
+  }
+  .bottom_para_M_AD p {
+    font-size: 10px;
+  }
+  .Business_IntelligenceBox,
+  .Business_intelligence_services {
+    margin: 20px auto;
+    width: 90%;
+  }
+  .Business_IntelligenceContent p {
+    padding: 4px 0;
+    font-size: 10px;
+  }
+  .Business_IntelligenceImg {
+    margin: 10px auto 30px auto;
+    width: 90%;
+    height: 40vh;
+  }
+
+  .Business_intelligence_services h1 {
+    padding: 5px 0 8px 0;
+
+    font-size: 15px;
+  }
+  .B_I_offers h3 {
+    padding-bottom: 6px;
+    font-size: 14px;
+  }
+  .B_I_offers ul li::before {
+    font-size: 8px;
+    left: -3px;
+    top: 9px;
+  }
+  .B_I_offers ul li {
+    padding: 0 0 5px 0;
+    font-size: 12px;
+  }
+  .B_I_offers ul p {
+    padding-bottom: 5px;
+    font-size: 10px;
+  }
+  .About_Project_management,
+  .ProjectManagement_flex,
+  .P_M_services {
+    margin: 20px auto 5px auto;
+    width: 85%;
+  }
+  .ProjectManagement_flex h1 {
+    font-size: 14px;
+  }
+  .ProjectManagement_flex .ProjectManagement_img {
+    margin: 5px 0 25px 0;
+  }
+  .ProjectManagement_flex .ProjectManagement_img img {
+    width: 100%;
+    height: 40vh;
+  }
+  .P_M_heading h3 {
+    padding: 5px 0 10px 0;
+    font-size: 13px;
+  }
+  .services_P_M h2 {
+    color: #088f8f;
+    padding: 2px 0 4px 0;
+    font-size: 12px;
+  }
+  .Best_software_box,
+  .Testing_services_box {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .Quality_box_service {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .Manual_testing,
+  .Automated_testing {
+    margin: 5px 0;
+    padding: 3px;
+  }
+  .Manual_testing h3,
+  .Automated_testing h3 {
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 11px;
+  }
+  .Qlty_solutions {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .itconsult_flex {
+    width: 95%;
+    margin: 20px auto 40px auto;
+  }
+  .itconsult_flex > div {
+    width: 50%;
+    margin: 5px 3px;
+  }
+  .itconsult_flex > div h1 {
+    color: #088f8f;
+    padding: 3px 0 8px 0;
+    font-size: 13px;
+  }
+  .itconsult_flex > div p {
+    padding-bottom: 8px;
+    font-size: 10px;
+  }
+  .itconsult_flex > div ul li {
+    list-style: none;
+    padding-bottom: 2px;
+    font-size: 10px;
+  }
+  .itconsult_flex > div ul {
+    margin-left: 8px;
+  }
+  .Manual_testing ul li,
+  .Automated_testing ul li {
+    padding: 0 0 4px 0;
+    list-style: none;
+    font-size: 10px;
+  }
+  .left_about_ h2 {
+    padding-bottom: 8px;
+  }
+  .Best_software_box p,
+  .Testing_services_box p {
+    font-size: 10px;
+  }
+  .Qlty_solutions h3 {
+    color: #088f8f;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+  .QltCntrl_service p {
+    font-size: 10px;
+  }
+  .Qlty_solutions_flex > div {
+    width: 33%;
+    padding: 3px;
+  }
+  .Qlty_solutions_flex .Focus_para {
+    padding: 4px 0;
+  }
+  .Qlty_solutions_flex > div h2 {
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+  .Qlty_solutions_flex ul li {
+    margin: 0 0 2px 8px;
+    list-style: none;
+    font-size: 10px;
+  }
+}
+
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  #Services_header,
+  #About_header,
+  #Contact_header {
+    height: 45vh;
+  }
+  .logo h1 a {
+    font-size: 23px;
+  }
+  .nav_menu ul li a {
+    font-size: 12px;
+  }
+  .nav_menu ul li {
+    margin: 0 12px;
+  }
+  .left_arrow,
+  .right_arrow {
+    padding: 5px 12px;
+    font-size: 20px;
+  }
+  .left_about_ h2 {
+    padding-bottom: 10px;
+  }
+  .prev {
+    left: 20px;
+  }
+  .next {
+    right: 20px;
+  }
+  .sticky .container,
+  .sticky .container_header_services,
+  .sticky .container_header_contact,
+  .sticky .container_header_about {
+    height: 55px;
+  }
+  .image_cont_slider {
+    height: 45vh;
+  }
+  .nav_menu ul .services_down li {
+    width: 180px;
+    font-size: 10px;
+    padding: 5px 0 5px 15px;
+    margin-left: -55px;
+  }
+  .nav_menu ul .product_down li {
+    width: 155px;
+    padding: 2px 0 6px 15px;
+    margin-left: -45px;
+  }
+  .nav_menu ul .services_down,
+  .nav_menu ul .product_down {
+    top: 20px;
+  }
+  .image_cont_slider .carousel_item .carousel-caption {
+    padding: 18% 12% 0 12%;
+  }
+  .carousel-caption .welcome_ket {
+    font-size: 25px;
+  }
+  .carousel-caption .Exclnc_One {
+    font-size: 16px;
+  }
+  .carousel-caption h1 {
+    font-size: 20px;
+    padding: 4px 0;
+  }
+  .carousel-caption h3 {
+    font-size: 16px;
+    padding: 0 15px 5px 15px;
+  }
+  .carousel-caption p {
+    font-size: 12px;
+    word-spacing: 1px;
+    padding-top: 5px;
+  }
+  .services_main {
+    padding: 7px 0;
+    margin: 25px auto;
+  }
+  .services_h1 h1,
+  .expertise_box h1 {
+    font-size: 28px;
+  }
+  .services_h1 p {
+    font-size: 13px;
+    padding: 6px 25px;
+  }
+  .Row_6,
+  .Row_5 {
+    margin: 0 30px;
+  }
+  .Row_6 .icon-box,
+  .Row_5 .icon-box {
+    margin: 12px 20px;
+    height: 212px;
+    width: 330px;
+  }
+  .Row_6 #icon_Main_Box {
+    height: 190px !important;
+  }
+  .icon-box .icon {
+    margin: 0 10px 0 10px;
+  }
+  .icon img {
+    height: 34px;
+  }
+  .icon-box .title {
+    top: 16px;
+    font-size: 13px;
+  }
+  .icon-box .description {
+    font-size: 11px;
+    top: 37px;
+    padding-right: 5px;
+  }
+  .services_btn button,
+  .about_btn button {
+    padding: 6px;
+    width: 120px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  .about_box,
+  .about_values,
+  .why_us {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 99%;
+    padding: 10px 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 40px auto;
+  }
+  .left_about,
+  .right_about {
+    width: 100%;
+  }
+  .left_about h2,
+  .about_design h3,
+  .about_qlt_asrnce h3 {
+    color: #088f8f;
+    font-size: 19px;
+  }
+  .left_about h1 {
+    color: #08192b;
+    padding: 6px 0 10px 0;
+    font-size: 19px;
+  }
+  .left_about p {
+    padding: 2px 0;
+    margin-right: 12px;
+    font-size: 13px;
+  }
+  .expertise_box {
+    margin: 10px 0 50px 0;
+  }
+  .expertise_box h1 {
+    padding: 10px 0;
+  }
+  .our_expertise_slides {
+    margin: 10px auto 20px auto;
+    width: 98%;
+  }
+  .our_expertise_slides > div {
+    width: 30%;
+    height: 190px;
+    padding: 6px 0;
+    border-radius: 4px;
+    margin: 8px;
+  }
+  .our_expertise_slides > div img {
+    height: 35px;
+  }
+  .our_expertise_slides > div h3 {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+  .our_expertise_slides > div p {
+    font-size: 11px;
+    padding: 6px;
+  }
+  .footer_main {
+    width: 100%;
+    padding: 45px 55px;
+  }
+  .footer_main h2 {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .footer_main .links_footer ul a li {
+    font-size: 11px;
+  }
+  .links_footer ul a li .fas {
+    font-size: 11px;
+  }
+
+  .footer_main .fas {
+    padding-right: 2px;
+  }
+
+  .services_footer ul {
+    padding-left: 0;
+  }
+  .services_footer li,
+  .contact_footer li {
+    margin: 5px 0;
+    font-size: 11px;
+    padding: 3px 0;
+  }
+  .footer_service_list {
+    text-align: left;
+  }
+  .Ket_footer p {
+    padding: 3px 0 5px 0;
+    font-size: 11px;
+  }
+  .social_links_ftr .fab {
+    font-size: 18px;
+    margin-top: 6px;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  .copy_ket_footer {
+    padding: 10px;
+  }
+  .copy_ket_footer p {
+    font-size: 14px;
+  }
+  .ContactUs_h1 h1,
+  .AboutUs_h1 h1 {
+    padding-top: 15%;
+    font-size: 22px;
+  }
+  .about_value_right {
+    margin-top: 0;
+    padding-left: 0;
+  }
+  .about_value_ h2,
+  .about_value_ h1 {
+    padding: 0 25px 5px 25px;
+    font-size: 17px;
+  }
+  .about_value_ p {
+    font-size: 13px;
+    padding: 15px 20px 15px 20px;
+  }
+  .Values_description h2,
+  .about_value_ h2,
+  .about_value_ h1 {
+    font-size: 16px;
+  }
+  .Values_description p {
+    font-size: 13px;
+  }
+  .Values_description {
+    padding: 20x 15px;
+    bottom: -60px;
+    height: 150px;
+  }
+  .Values_description h2 {
+    padding-bottom: 6px;
+  }
+  .Value_box_flex {
+    width: 95%;
+    margin: 30px auto;
+  }
+  .values_Boxes {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+  #Value_img {
+    position: relative;
+    margin-left: -20px;
+    overflow: hidden;
+    width: calc(100% + 35px);
+  }
+  .values_Boxes #Value_img img {
+    width: 90%;
+    height: 48vh;
+  }
+  .values_icons :nth-child(1) {
+    margin: 0px 10px 0px 0px;
+    height: 33px;
+  }
+  .about_why {
+    padding-right: 0;
+  }
+  .left_about {
+    padding: 10px 0;
+  }
+  .why_img,
+  .about_why {
+    width: 100%;
+  }
+  .why_ket h1 {
+    font-size: 19px;
+    padding: 10px 0;
+  }
+  .reasons h3 {
+    font-size: 17px;
+    padding: 10px 0;
+  }
+  .reasons p {
+    font-size: 13px;
+  }
+
+  .container_contact .contact_row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px 0;
+    border-radius: 3px;
+  }
+  .col_left_contact {
+    width: 95%;
+    text-align: center;
+    margin: 15px;
+  }
+  .col_contact_EC img,
+  .col_location img {
+    height: 32px;
+  }
+  .info_box_lctn h3,
+  .info-box h3 {
+    font-size: 17px;
+  }
+  .info_box_lctn p,
+  .col_contact_EC p {
+    font-size: 16px;
+  }
+  .col_contact_EC,
+  .info_box_lctn {
+    padding: 30px 20px;
+  }
+  .col_right_contact {
+    width: 100%;
+  }
+  .col_right_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form_row,
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px auto;
+    width: 92%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .col_right_contact input,
+  .col_right_contact textarea {
+    width: 85%;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid rgba(29, 42, 68, 0.548);
+    padding: 8px;
+    margin: 10px;
+    outline: none;
+  }
+  .contact_btn button {
+    border-radius: 3px;
+    padding: 8px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .map_Location {
+    width: 95%;
+    margin: 40px auto 60px auto;
+  }
+  .map_Location iframe {
+    height: 260px;
+  }
+  .Services_h1 {
+    padding-top: 10%;
+  }
+  .Services_h1 h1 {
+    font-size: 25px;
+    padding-bottom: 8px;
+  }
+  .Services_h1 p {
+    font-size: 13px;
+    padding: 7px 75px;
+  }
+  .icon-box button {
+    padding: 4px 6px;
+    width: 90px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .icon-box a button {
+    right: 120px;
+    bottom: 15px;
+  }
+
+  #Serviceone_header,
+  #staffaug,
+  #cyberSecurity_service,
+  #webDevelope_service,
+  #C_software_develope_service,
+  #Digital_marketing_service,
+  #Mobile_application_service,
+  #Business_Intelligence_service,
+  #Project_management_service,
+  #Testing_support_service,
+  #itCunslt_training {
+    height: 55vh;
+  }
+
+  /* headers */
+
+  .cloud_service {
+    top: 22%;
+    width: 70%;
+  }
+  .staffService h1,
+  .cloud_service h1,
+  .benifits_staffService h1,
+  .itCunslt_trainingService h1,
+  .cyber_securityService h1,
+  .web_developeService h1,
+  .C_software_developeService h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .Project_managementService h1 {
+    font-size: 18px;
+  }
+  .web_developeService,
+  .C_software_developeService,
+  .Digital_marketingService,
+  .Mobile_applicationService,
+  .Business_IntelligenceService,
+  .Testing_supportService,
+  .Project_managementService,
+  .itCunslt_trainingService {
+    top: 34%;
+    left: 13.5%;
+    width: 70%;
+  }
+  #webdevelope_service_heading,
+  .Csoftware_Dservice_heading {
+    margin: 20px;
+  }
+  #webdevelope_service_heading p {
+    width: 85%;
+    padding: 5px 0;
+    font-size: 12px;
+  }
+  .webdevelopement_services,
+  .csd_services {
+    width: 90%;
+    margin: 15px auto;
+  }
+  .webdevelopement_services > div {
+    width: 50%;
+    margin: 18px 4px;
+  }
+  .webdevelopement_services h2 {
+    font-size: 16px !important;
+  }
+  #webdevelope_service_heading h1,
+  .webdevelopement_services h2,
+  .Csoftware_Dservice_heading h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .itCunslt_trainingService h1,
+  .Project_managementService h1 {
+    margin: 7px 0;
+    color: #088f8f;
+    font-size: 18px;
+  }
+  .sticky .container a,
+  .sticky .container_header_services a,
+  .sticky .container_header_contact a,
+  .sticky .container_header_about a {
+    color: #08192b;
+  }
+  .cloud_service p,
+  .cyber_securityService h2 {
+    font-size: 12px;
+    padding-top: 0;
+  }
+  .cloud_reason h2,
+  .whystaffService h2,
+  #helpC_S h3 {
+    font-size: 19px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+  .cloud_reason {
+    margin: 30px auto;
+    width: 85%;
+  }
+  .cloud_reason p,
+  .whystaffService p {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .cloud_reasons {
+    margin: 15px auto;
+
+    font-size: 14px;
+    width: 85%;
+  }
+  .cloud_reasons > div {
+    margin-left: 10px;
+  }
+  .cloud_reasons ol li {
+    line-height: 17px;
+    padding: 4px 0;
+    list-style-type: square;
+  }
+  .cloud_Services h1,
+  .cloud_Exp h1 {
+    font-size: 18px;
+  }
+  .cloudServices_flex,
+  .staff_paras,
+  .whystaffService,
+  .benifits_staffService {
+    margin: 25px auto;
+    width: 90%;
+  }
+  .cloudServices_flex > div {
+    width: 45%;
+  }
+  .cloudServices_flex > div h2,
+  .C_S_flex_service > div h2 {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+  .cloudServices_flex > div p {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .cloudServices_flex > div ul li {
+    line-height: 22px;
+    margin-left: 10px;
+    list-style: none;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .cloud_Exp {
+    margin: 8px auto 32px auto;
+  }
+  .cloud_Exp h1 {
+    padding: 0px 0 10px 0;
+    line-height: 22px;
+  }
+  .cloud_Exp .exp_paras {
+    margin: 10px;
+    padding: 0 8px;
+  }
+  .cloud_Exp .exp_paras p {
+    border-left: 2px solid #088f8f;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  .staff_paras ul {
+    width: 85%;
+  }
+  .staff_paras ul li {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .whystaffService ul li,
+  .benifits_staffService ul li {
+    width: 85%;
+    margin: 8px auto;
+    font-size: 12px;
+  }
+  .benifits_staffService p {
+    width: 85%;
+    margin: 8px auto;
+  }
+  .staffService p,
+  .benifits_staffService p,
+  .itCunslt_trainingService p,
+  .web_developeService p,
+  .C_software_developeService p {
+    padding: 5px 0 5px 0;
+    font-size: 12px;
+  }
+  .C_S_flex_service > div {
+    width: 85%;
+    margin: 5px 0 10px 0;
+  }
+  #helpC_S {
+    text-align: center;
+    margin: 25px 0 15px 0;
+  }
+  .C_S_flex_service p,
+  .Wa_v_Do p,
+  .Wa_v_Do_flex p,
+  .securt_box p,
+  .webdevelopement_services p,
+  #ketDiffrnt_service p,
+  .work_methods_service p,
+  .csd_services p,
+  #S_DE p,
+  .WHY_US p,
+  .steps_work p,
+  .Business_intelligence_services p,
+  .About_Project_management p,
+  .ProjectManagement_flex p,
+  .P_M_services p,
+  .Manual_testing p,
+  .Automated_testing p,
+  .Qlty_solutions p {
+    font-size: 12px;
+  }
+  #S_D_cycle p {
+    width: 85%;
+    font-size: 10px;
+  }
+  .services_P_M p {
+    font-size: 12px;
+  }
+
+  /* paras */
+
+  .Wa_v_Do {
+    width: 90%;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px auto 20px auto;
+  }
+  .Wa_v_Do h2 {
+    padding: 0 0 5px 0;
+    font-size: 15px;
+  }
+  .Wa_v_Do_flex {
+    width: 90%;
+    margin: 20px auto;
+    border-top: 1px solid #088f8f;
+    padding-top: 5px;
+  }
+  .Wa_v_Do_flex > div h4 {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  .Wa_v_Do_flex > div {
+    margin: 10px 2px;
+  }
+  .securt_box h2,
+  .securt_box h4 {
+    padding-bottom: 5px;
+    font-size: 17px;
+  }
+  .securt_box {
+    width: 85%;
+    margin: 25px auto;
+  }
+
+  .securt_box ol li {
+    padding-top: 4px;
+    font-size: 12px;
+  }
+  .securt_box ol {
+    margin-left: 11px;
+    padding-top: 10px;
+  }
+  .ketDiffrnt_service {
+    margin: 15px auto;
+  }
+  .ketDiffrnt_service h2 {
+    margin: 10px 0 20px 0;
+    font-size: 17px;
+  }
+  #ketDiffrnt_service > div {
+    border-radius: 3px;
+    padding: 4px 3px;
+  }
+  #ketDiffrnt_service {
+    margin: 5px auto 35px auto;
+  }
+  #ketDiffrnt_service > div h3 {
+    padding-bottom: 6px;
+    font-size: 13px;
+  }
+  .h_v_wrk {
+    margin: 20px auto;
+  }
+  .STAFF_AUG {
+    top: 25%;
+    width: 70%;
+  }
+  .StaffAug_service p {
+    font-size: 12px;
+    padding-top: 3px;
+  }
+  .work_methods_service {
+    width: 85%;
+    margin: 10px auto;
+  }
+  .work_methods_service > div {
+    padding: 5px 5px 5px 10px;
+  }
+  .h_v_wrk_heading h1 {
+    font-size: 18px;
+  }
+  .work_methods_service > div h2 {
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+  .work_methods_service span {
+    font-size: 45px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 93px;
+    left: -15px;
+  }
+  .csd_services > div span {
+    font-size: 12px;
+    left: 1px;
+  }
+  .csd_services > div {
+    padding: 6px 5px;
+  }
+  .csd_services h3 {
+    padding: 5px 0 7px 0;
+    font-size: 13px;
+  }
+  #S_DE {
+    margin: 20px auto;
+    width: 85%;
+  }
+  #S_D_cycle h1,
+  #S_DE h1 {
+    margin: 5px 0 7px 0;
+    font-size: 16px;
+  }
+  #S_D_cycle {
+    margin: 25px auto;
+    text-align: center;
+    width: 100%;
+  }
+  .C_software_d_cycle {
+    margin: 10px auto;
+  }
+  .C_software_d_cycle > div h3 {
+    padding: 5px 0 8px 0;
+
+    font-size: 15px;
+  }
+  .C_software_d_cycle > div {
+    margin: 15px 0 0 4px;
+  }
+  .C_software_d_cycle > div ul li {
+    list-style: none;
+    font-size: 12px;
+  }
+  .C_software_d_cycle > div ul {
+    padding-left: 12px;
+    text-align: left;
+  }
+  .WHY_US {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .WHY_US :nth-child(1) h2 {
+    font-size: 18px;
+  }
+  .WHY_US :nth-child(1) h3 {
+    font-size: 16px;
+  }
+  .list_C_S_D {
+    margin: 7px 0;
+  }
+  .list_C_S_D ul span {
+    padding-right: 4px;
+    font-size: 12px;
+  }
+  .list_C_S_D ul li {
+    padding: 2px 0;
+    font-size: 12px;
+  }
+  .bestForYou_service,
+  .Mobile_app_developBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: 20px auto;
+  }
+  .bestForYou_service .content_box h2 {
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .bestForYou_service .content_box h1 {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .bestForYou_service .content_box {
+    padding: 0px 0 0 10px;
+  }
+  .bestForYou_service .content_box p {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .colouredBox_work {
+    margin: 20px auto 35px auto;
+    padding: 10px 5px;
+  }
+  .Hw_weWrk h2 {
+    font-size: 16px;
+  }
+  .steps_work > div {
+    padding: 5px;
+    width: 33.3%;
+  }
+  .steps_work h4 {
+    font-size: 12px;
+  }
+  .steps_work h2 {
+    font-size: 16px;
+  }
+  .info_box_lctn .fas {
+    padding: 7px 11px !important;
+  }
+  .info_box_lctn .fas,
+  .col_contact_EC .fas {
+    font-size: 28px;
+
+    padding: 7px;
+  }
+  .BenifitsOfDM {
+    margin: 20px auto;
+  }
+  .BenifitsOfDM h1 {
+    font-size: 17px;
+    color: #088f8f;
+  }
+  .BenifitsOfDM ul li {
+    list-style: none;
+    padding: 3px 0;
+    font-size: 12px;
+  }
+  .BenifitsOfDM ul {
+    padding: 3px 8px 8px 42px;
+  }
+  .MobileContent p {
+    padding: 5px 8px 8px 5px;
+    font-size: 12px;
+  }
+  .We_offer_mobile_app,
+  .mobile_app_platforms {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .We_offer_mobile_app h3 {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .We_offer_mobile_app h1,
+  .mobile_app_platforms h1 {
+    padding-bottom: 5px;
+    font-size: 17px;
+  }
+  .mobile_app_platforms ul li,
+  .We_offer_mobile_app ul li {
+    padding: 2px 0;
+    font-size: 12px;
+  }
+  .bottom_para_M_AD p {
+    font-size: 12px;
+  }
+  .Business_IntelligenceBox,
+  .Business_intelligence_services {
+    margin: 20px auto;
+    width: 90%;
+  }
+  .Business_IntelligenceContent p {
+    padding: 4px 0;
+    font-size: 12px;
+  }
+  .Business_IntelligenceImg {
+    margin: 10px auto 30px auto;
+    width: 90%;
+    height: 55vh;
+  }
+
+  .Business_intelligence_services h1 {
+    padding: 5px 0 8px 0;
+
+    font-size: 17px;
+  }
+  .B_I_offers h3 {
+    padding-bottom: 6px;
+    font-size: 16px;
+  }
+  .Quality_box_service .QltCntrl_service h2 {
+    font-size: 13px;
+  }
+  .QltCntrl_service p {
+    font-size: 12px;
+  }
+  .B_I_offers ul li::before {
+    font-size: 11px;
+    left: -5px;
+    top: 16px;
+  }
+  .Best_software_box p,
+  .Testing_services_box p {
+    font-size: 12px;
+  }
+  .Best_software_box h1,
+  .Testing_services_box h1 {
+    font-size: 14px;
+  }
+  .B_I_offers ul li {
+    padding: 5px 0 5px 0;
+    font-size: 14px;
+  }
+  .B_I_offers ul p {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .About_Project_management,
+  .ProjectManagement_flex,
+  .P_M_services {
+    margin: 20px auto 5px auto;
+    width: 85%;
+  }
+  .ProjectManagement_flex h1 {
+    font-size: 16px;
+  }
+  .ProjectManagement_flex .ProjectManagement_img {
+    margin: 5px 0 25px 0;
+  }
+  .ProjectManagement_flex .ProjectManagement_img img {
+    width: 100%;
+    height: 40vh;
+  }
+  .P_M_heading h3 {
+    padding: 5px 0 10px 0;
+    font-size: 15px;
+  }
+  .services_P_M h2 {
+    color: #088f8f;
+    padding: 2px 0 4px 0;
+    font-size: 14px;
+  }
+  .Best_software_box,
+  .Testing_services_box {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .Quality_box_service {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .Manual_testing,
+  .Automated_testing {
+    margin: 7px 0;
+    padding: 5px;
+  }
+  .Manual_testing h3,
+  .Automated_testing h3 {
+    padding-bottom: 8px;
+    text-align: left;
+    font-size: 13px;
+  }
+  .Qlty_solutions {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .itconsult_flex {
+    width: 95%;
+    margin: 20px auto 40px auto;
+  }
+  .itconsult_flex > div {
+    width: 50%;
+    margin: 7px 4px;
+  }
+  .itconsult_flex > div h1 {
+    color: #088f8f;
+    padding: 5px 0 10px 0;
+    font-size: 15px;
+  }
+  .itconsult_flex > div p {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .itconsult_flex > div ul li {
+    list-style: none;
+    padding-bottom: 4px;
+    font-size: 12px;
+  }
+  .itconsult_flex > div ul {
+    margin-left: 10px;
+  }
+  .Manual_testing ul li,
+  .Automated_testing ul li {
+    padding: 0 0 5px 0;
+    list-style: none;
+    font-size: 12px;
+  }
+  .Qlty_solutions h3 {
+    color: #088f8f;
+    padding-bottom: 7px;
+    font-size: 15px;
+  }
+  .Qlty_solutions_flex > div {
+    width: 33%;
+    padding: 4px;
+  }
+  .Qlty_solutions_flex .Focus_para {
+    padding: 5px 0;
+  }
+  .Qlty_solutions_flex > div h2 {
+    padding-bottom: 8px;
+    font-size: 13px;
+  }
+  .Qlty_solutions_flex ul li {
+    margin: 0 0 4px 10px;
+    list-style: none;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1440px) {
+  .logo h1 a {
+    font-size: 25px;
+  }
+  .nav_menu ul li a {
+    font-size: 13px;
+  }
+  .nav_menu ul li {
+    margin: 0 13px;
+  }
+  .left_arrow,
+  .right_arrow {
+    padding: 7px 15px;
+    font-size: 20px;
+  }
+  .prev {
+    left: 25px;
+  }
+  .next {
+    right: 25px;
+  }
+  .sticky .container,
+  .sticky .container_header_services,
+  .sticky .container_header_contact,
+  .sticky .container_header_about {
+    height: 60px;
+  }
+  .image_cont_slider {
+    height: 75vh;
+  }
+  .nav_menu ul .services_down li {
+    width: 200px;
+    font-size: 13px;
+    padding: 5px 0 5px 15px;
+    margin-left: -60px;
+  }
+  .nav_menu ul .product_down li {
+    width: 160px;
+    padding: 2px 0 6px 15px;
+    margin-left: -45px;
+  }
+  .nav_menu ul .services_down,
+  .nav_menu ul .product_down {
+    top: 26px;
+  }
+  .image_cont_slider .carousel_item .carousel-caption {
+    padding: 120px 56px 0 56px;
+  }
+  .carousel-caption .welcome_ket {
+    font-size: 27px;
+  }
+  .carousel-caption .Exclnc_One {
+    font-size: 18px;
+  }
+  .carousel-caption h1 {
+    font-size: 22px;
+    padding: 5px 0;
+  }
+  .carousel-caption h3 {
+    font-size: 18px;
+    padding: 0 25px 10px 25px;
+  }
+  .carousel-caption p {
+    font-size: 15px;
+    word-spacing: 2px;
+    padding: 10px 100px 0 100px;
+  }
+  .services_main {
+    padding: 8px 0;
+    margin: 30px auto;
+  }
+  .services_h1 h1,
+  .expertise_box h1 {
+    font-size: 30px;
+  }
+  .services_h1 p {
+    font-size: 15px;
+    padding: 8px 200px;
+  }
+  .Row_6,
+  .Row_5 {
+    margin: 0 60px;
+  }
+  .Row_6 .icon-box,
+  .Row_5 .icon-box {
+    margin: 25px 10px;
+    height: 245px;
+    width: 475px;
+  }
+  .Row_6 #icon_Main_Box {
+    height: 210px !important;
+  }
+  .icon-box .icon {
+    margin: 0 10px 0 10px;
+  }
+  .icon img {
+    height: 40px;
+  }
+  .icon-box .title {
+    top: 20px;
+    font-size: 15px;
+  }
+  .icon-box .description {
+    font-size: 13px;
+    top: 52px;
+    padding-right: 5px;
+  }
+  .services_btn {
+    margin-top: 30px;
+  }
+  .services_btn button,
+  .about_btn button {
+    padding: 6px;
+    width: 130px;
+    border-radius: 6px;
+    font-size: 17px;
+  }
+  .about_box,
+  .about_values,
+  .why_us {
+    width: 95%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 50px auto;
+  }
+  .left_about,
+  .right_about {
+    width: 100%;
+  }
+
+  .about_design h3,
+  .about_qlt_asrnce h3 {
+    color: #088f8f;
+    font-size: 21px;
+  }
+  .values_icons h2 {
+    font-size: 18px;
+  }
+
+  .left_about h1 {
+    color: #08192b;
+    padding: 3px 0 3px 0;
+    font-size: 20px;
+  }
+  .left_about p {
+    padding: 2px 30px 8px 0;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .expertise_box {
+    margin: 10px 0 50px 0;
+  }
+  .expertise_box h1 {
+    padding: 10px 0;
+  }
+  .our_expertise_slides {
+    margin: 10px auto 20px auto;
+    width: 95%;
+  }
+  .our_expertise_slides > div {
+    width: 22%;
+    height: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .our_expertise_slides > div img {
+    height: 40px;
+  }
+  .our_expertise_slides > div h3 {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+  .our_expertise_slides > div p {
+    font-size: 13px;
+    padding: 6px;
+  }
+  .footer_main {
+    width: 100%;
+    padding: 45px 55px;
+  }
+  .footer_main h2 {
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+
+  .footer_main .links_footer ul a li {
+    font-size: 13px;
+  }
+  .links_footer ul a li .fas {
+    font-size: 13px;
+  }
+  .info_box_lctn .fas {
+    padding: 8px 12px !important;
+  }
+  .info_box_lctn .fas,
+  .col_contact_EC .fas {
+    font-size: 30px;
+
+    padding: 8px;
+  }
+  .footer_main .fas {
+    padding-right: 2px;
+  }
+  .services_footer {
+    text-align: left;
+  }
+
+  .links_footer {
+    width: 20%;
+  }
+  .services_footer ul {
+    padding-left: 0;
+  }
+  .services_footer li,
+  .contact_footer li {
+    margin: 5px 0;
+    font-size: 13px;
+    padding: 4px 0;
+  }
+  .Ket_footer p {
+    padding: 3px 0 5px 0;
+    font-size: 13px;
+  }
+  .social_links_ftr .fab {
+    font-size: 20px;
+    margin-top: 6px;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  .copy_ket_footer {
+    padding: 10px;
+  }
+  .copy_ket_footer p {
+    font-size: 16px;
+  }
+  .contact_footer {
+    width: 26%;
+  }
+  .services_footer {
+    width: 25%;
+  }
+  .links_footer {
+    width: 19%;
+  }
+  .ContactUs_h1 h1,
+  .AboutUs_h1 h1 {
+    padding-top: 12%;
+    font-size: 24px;
+  }
+  .about_value_ h2,
+  .about_value_ h1 {
+    padding: 0 25px 0 25px;
+    font-size: 19px;
+  }
+  .about_value_ p {
+    font-size: 15px;
+    padding: 15px 20px 15px 20px;
+  }
+  .Values_description h2,
+  .about_value_ h1 {
+    font-size: 18px;
+  }
+  .about_value_ h2 {
+    font-size: 23px;
+  }
+  .Values_description p {
+    font-size: 14px;
+  }
+  .Values_description {
+    padding: 20x 15px;
+    bottom: -76px;
+    height: 160px;
+  }
+  .Values_description h2 {
+    padding-bottom: 8px;
+  }
+  .Value_box_flex {
+    width: 95%;
+    margin: 40px auto 80px auto;
+  }
+  .values_Boxes {
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+  #Value_img {
+    position: relative;
+    margin-left: -16px;
+    overflow: hidden;
+    width: calc(100% + 30px);
+  }
+  .values_Boxes #Value_img img {
+    width: 90%;
+    height: 50vh;
+  }
+  .values_icons :nth-child(1) {
+    height: 28px;
+  }
+  .about_value_right {
+    padding-left: 20px;
+  }
+  .about_values .values_icons {
+    margin: 5px 0;
+  }
+  .about_values {
+    padding: 5px;
+  }
+  .reasons h3 {
+    font-size: 20px;
+    padding: 4px 0;
+  }
+  .why_ket h1 {
+    font-size: 25px;
+    padding: 7px 0;
+  }
+  .values_icons img {
+    height: 30px;
+  }
+  .reasons p {
+    font-size: 14px;
+  }
+  .container_contact .contact_row {
+    width: 85%;
+  }
+  .col_left_contact,
+  .col_right_contact {
+    width: 47%;
+    margin: 20px 10px;
+  }
+  .col_contact_EC,
+  .info_box_lctn {
+    padding: 30px 10px;
+  }
+  .col_contact_EC {
+    width: 48%;
+    height: 140px;
+  }
+  .col_contact_EC p,
+  .info_box_lctn p {
+    font-size: 15px;
+  }
+  .col_right_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+  .col_right_contact input,
+  .col_right_contact textarea {
+    width: 98%;
+    margin: 10px 0;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .form_row,
+  .form-group {
+    width: 100%;
+  }
+  .map_Location {
+    width: 95%;
+  }
+  .Services_h1 h1 {
+    font-size: 28px;
+    padding-bottom: 5px;
+  }
+  .Services_h1 p {
+    font-size: 14px;
+    padding: 5px 180px;
+  }
+  .Services_h1 {
+    padding-top: 12%;
+  }
+  .icon-box a button {
+    position: absolute;
+    right: 177.5px;
+    bottom: 15px;
+  }
+
+  .icon-box button {
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 17px;
+  }
+  #Serviceone_header,
+  #staffaug,
+  #cyberSecurity_service,
+  #webDevelope_service,
+  #C_software_develope_service,
+  #Digital_marketing_service,
+  #Mobile_application_service,
+  #Business_Intelligence_service,
+  #Project_management_service,
+  #Testing_support_service,
+  #itCunslt_training {
+    height: 60vh;
+  }
+  .cloud_service {
+    top: 25%;
+    width: 50%;
+  }
+  .staffService h1,
+  .cloud_service h1,
+  .benifits_staffService h1,
+  .itCunslt_trainingService h1,
+  .cyber_securityService h1,
+  .web_developeService h1,
+  .C_software_developeService h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .Project_managementService h1 {
+    font-size: 22px;
+  }
+  .web_developeService,
+  .C_software_developeService,
+  .Digital_marketingService,
+  .Mobile_applicationService,
+  .Business_IntelligenceService,
+  .Testing_supportService,
+  .Project_managementService,
+  .itCunslt_trainingService {
+    top: 32%;
+    left: 13.5%;
+    width: 50%;
+  }
+  #webdevelope_service_heading,
+  .Csoftware_Dservice_heading {
+    margin: 30px;
+  }
+  #webdevelope_service_heading p {
+    width: 65%;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+  .webdevelopement_services,
+  .csd_services {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .webdevelopement_services > div {
+    width: 50%;
+    margin: 18px 4px;
+  }
+  .webdevelopement_services h2 {
+    font-size: 18px !important;
+  }
+  #webdevelope_service_heading h1,
+  .webdevelopement_services h2,
+  .Csoftware_Dservice_heading h1,
+  .Digital_marketingService h1,
+  .Mobile_applicationService h1,
+  .Business_IntelligenceService h1,
+  .Testing_supportService h1,
+  .itCunslt_trainingService h1,
+  .Project_managementService h1 {
+    margin: 10px 0;
+    color: #68a4c4;
+    font-size: 20px;
+  }
+  .sticky .container a,
+  .sticky .container_header_services a,
+  .sticky .container_header_contact a,
+  .sticky .container_header_about a {
+    color: #08192b;
+  }
+  .cloud_service p,
+  .cyber_securityService h2 {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  .cyber_securityService h2 {
+    padding-top: 10px;
+  }
+  .cloud_reason h2,
+  .whystaffService h2,
+  #helpC_S h3 {
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 10px;
+  }
+  .cloud_reason {
+    margin: 50px auto;
+    width: 70%;
+  }
+  .cloud_reason p,
+  .whystaffService p {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .cloud_reasons {
+    margin: 20px auto;
+
+    font-size: 16px;
+    width: 85%;
+  }
+  .cloud_reasons > div {
+    margin-left: 10px;
+  }
+  .cloud_reasons ol li {
+    line-height: 19px;
+    padding: 5px 0;
+    list-style-type: square;
+  }
+  .cloud_Services {
+    width: 80%;
+  }
+  .cloud_Services h1,
+  .cloud_Exp h1 {
+    font-size: 20px;
+  }
+  .cloudServices_flex,
+  .staff_paras,
+  .whystaffService,
+  .benifits_staffService {
+    margin: 35px auto;
+    width: 85%;
+  }
+  .cloudServices_flex > div {
+    width: 45%;
+  }
+  .cloudServices_flex > div h2,
+  .C_S_flex_service > div h2 {
+    margin: 8px 0;
+    font-size: 17px;
+  }
+  .cloudServices_flex > div p {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .cloudServices_flex > div ul li {
+    line-height: 24px;
+    margin-left: 14px;
+    list-style: none;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  .cloud_Exp {
+    margin: 15px auto 45px auto;
+    width: 80%;
+  }
+  .cloud_Exp h1 {
+    padding: 0px 0 10px 0;
+    line-height: 24px;
+  }
+  .cloud_Exp .exp_paras {
+    margin: 25px;
+    padding: 0 8px;
+  }
+  .cloud_Exp .exp_paras p {
+    border-left: 3px solid #088f8f;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  .staff_paras ul {
+    width: 85%;
+  }
+  .staff_paras ul li {
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  .whystaffService ul li,
+  .benifits_staffService ul li {
+    width: 85%;
+    margin: 8px auto;
+    font-size: 14px;
+  }
+  .benifits_staffService p {
+    width: 70%;
+    margin: 10px auto;
+  }
+  .staffService p,
+  .benifits_staffService p,
+  .itCunslt_trainingService p,
+  .web_developeService p,
+  .C_software_developeService p {
+    padding: 5px 0 5px 0;
+    font-size: 14px;
+  }
+  .C_S_flex_service > div {
+    width: 85%;
+    margin: 5px 0 10px 0;
+  }
+  #helpC_S {
+    text-align: center;
+    margin: 30px 0 20px 0;
+  }
+  .C_S_flex_service {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .C_S_flex_service p,
+  .Wa_v_Do p,
+  .Wa_v_Do_flex p,
+  .securt_box p,
+  .webdevelopement_services p,
+  #ketDiffrnt_service p,
+  .work_methods_service p,
+  .csd_services p,
+  #S_DE p,
+  .WHY_US p,
+  .steps_work p,
+  .Business_intelligence_services p,
+  .About_Project_management p,
+  .ProjectManagement_flex p,
+  .P_M_services p,
+  .Manual_testing p,
+  .Automated_testing p,
+  .Qlty_solutions p {
+    font-size: 14px;
+  }
+  #S_DE p {
+    width: 80%;
+    margin: auto;
+  }
+  .WHY_US p {
+    width: 70%;
+  }
+  .Qlty_solutions .Quality_descrptn {
+    padding-right: 200px;
+  }
+  #S_D_cycle p {
+    width: 65%;
+    font-size: 14px;
+  }
+  .services_P_M p {
+    font-size: 14px;
+  }
+  .Wa_v_Do {
+    width: 73%;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 30px auto 45px auto;
+  }
+  .Wa_v_Do h2 {
+    padding: 5px 0 10px 0;
+    font-size: 17px;
+  }
+  .Wa_v_Do_flex {
+    width: 80%;
+    margin: 40px auto;
+    border-top: 1px solid #088f8f;
+    padding-top: 10px;
+  }
+  .Wa_v_Do_flex > div h4 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .Wa_v_Do_flex > div {
+    margin: 15px 5px;
+  }
+  #webdevelope_service_heading h1,
+  .webdevelopement_services h2,
+  .Csoftware_Dservice_heading h1 {
+    color: #088f8f;
+  }
+  .securt_box h2,
+  .securt_box h4 {
+    padding-bottom: 20px;
+    font-size: 19px;
+  }
+  .securt_box {
+    width: 80%;
+    margin: 40px auto;
+  }
+  .securt_box ol li {
+    padding-top: 8px;
+    font-size: 14px;
+  }
+  .securt_box ol {
+    margin-left: 15px;
+    padding-top: 12px;
+  }
+  .ketDiffrnt_service {
+    margin: 30px auto;
+  }
+  .ketDiffrnt_service h2 {
+    margin: 20px 0 30px 0;
+    font-size: 19px;
+  }
+  #ketDiffrnt_service > div {
+    border-radius: 4px;
+    padding: 10px;
+  }
+  #ketDiffrnt_service {
+    margin: 40px auto 50px auto;
+    width: 85%;
+  }
+  #ketDiffrnt_service > div h3 {
+    padding-bottom: 8px;
+    font-size: 15px;
+  }
+  .h_v_wrk {
+    margin: 40px auto;
+  }
+  .STAFF_AUG {
+    top: 25%;
+    width: 50%;
+  }
+  .StaffAug_service p {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  .work_methods_service {
+    width: 85%;
+    margin: 35px auto;
+  }
+  .work_methods_service > div {
+    padding: 5px 5px 5px 10px;
+  }
+  .h_v_wrk_heading h1 {
+    font-size: 20px;
+  }
+  .work_methods_service > div h2 {
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .work_methods_service span {
+    font-size: 60px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 62px;
+    left: -25px;
+  }
+  .csd_services > div span {
+    font-size: 14px;
+    left: 5px;
+  }
+  .csd_services > div {
+    padding: 8px;
+  }
+  .csd_services h3 {
+    padding: 7px 0 10px 0;
+    font-size: 15px;
+  }
+  #S_DE {
+    margin: 40px auto;
+    width: 80%;
+  }
+  #S_D_cycle h1,
+  #S_DE h1 {
+    margin: 10px 0 15px 0;
+    font-size: 18px;
+  }
+  #S_D_cycle {
+    margin: 35px auto;
+    text-align: center;
+    width: 100%;
+  }
+  .C_software_d_cycle {
+    margin: 45px auto;
+    width: 80%;
+  }
+  .C_software_d_cycle > div h3 {
+    padding: 7px 0 10px 0;
+
+    font-size: 17px;
+  }
+  .C_software_d_cycle > div {
+    margin: 15px 0 0 4px;
+  }
+  .C_software_d_cycle > div ul li {
+    list-style: none;
+    font-size: 14px;
+  }
+  .C_software_d_cycle > div ul {
+    padding-left: 14px;
+    text-align: left;
+  }
+  .WHY_US {
+    width: 80%;
+    margin: 35px auto;
+  }
+  .WHY_US :nth-child(1) h2 {
+    font-size: 20px;
+    color: #088f8f;
+  }
+  .WHY_US :nth-child(1) h3 {
+    font-size: 18px;
+  }
+
+  .list_C_S_D {
+    margin: 10px 0;
+  }
+  .list_C_S_D ul span {
+    padding-right: 5px;
+    font-size: 14px;
+  }
+  .list_C_S_D ul li {
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .bestForYou_service,
+  .Mobile_app_developBox {
+    width: 95%;
+    margin: 50px auto;
+  }
+  .about_value_right p {
+    padding: 0 0 5px 0;
+  }
+  .bestForYou_service .content_box h2 {
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+  .bestForYou_service .content_box h1 {
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+  .bestForYou_service .content_box {
+    padding: 0 0 0 30px;
+  }
+  .bestForYou_service .content_box p {
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  .colouredBox_work {
+    margin: 30px auto 45px auto;
+    padding: 10px;
+    width: 85%;
+  }
+  .Hw_weWrk h2 {
+    font-size: 18px;
+  }
+  .steps_work > div {
+    padding: 8px;
+    width: 33.3%;
+  }
+  .steps_work h4 {
+    font-size: 14px;
+  }
+  .steps_work h2 {
+    font-size: 18px;
+    padding: 5px 0;
+    color: #088f8f;
+  }
+  .BenifitsOfDM {
+    margin: 50px auto;
+    width: 85%;
+  }
+  .BenifitsOfDM h1 {
+    font-size: 19px;
+  }
+  .BenifitsOfDM ul li {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .BenifitsOfDM ul {
+    padding: 3px 8px 8px 14px;
+  }
+  .MobileContent p {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .We_offer_mobile_app,
+  .mobile_app_platforms {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .We_offer_mobile_app h3 {
+    padding-bottom: 10px;
+    font-size: 17px;
+    color: #088f8f;
+  }
+  .We_offer_mobile_app h1,
+  .mobile_app_platforms h1 {
+    padding-bottom: 10px;
+    font-size: 19px;
+  }
+  .mobile_app_platforms ul li,
+  .We_offer_mobile_app ul li {
+    padding: 3px 0;
+    font-size: 14px;
+  }
+  .bottom_para_M_AD p {
+    font-size: 14px;
+    width: 70%;
+  }
+  .Business_IntelligenceBox,
+  .Business_intelligence_services {
+    margin: 30px auto;
+    width: 80%;
+  }
+  .Business_intelligence_services p {
+    padding: 10px 120px;
+    text-align: center;
+  }
+  .Business_IntelligenceContent p {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .Business_IntelligenceImg {
+    margin: 30px auto 40px auto;
+    width: 80%;
+    height: 65vh;
+  }
+
+  .Business_intelligence_services h1 {
+    padding: 7px 0 10px 0;
+
+    font-size: 19px;
+  }
+  .B_I_offers h3 {
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+  .Quality_box_service .QltCntrl_service h2 {
+    font-size: 15px;
+  }
+  .QltCntrl_service p {
+    font-size: 14px;
+  }
+  .B_I_offers ul li::before {
+    font-size: 12px;
+    left: -6px;
+    top: 13px;
+  }
+  .Best_software_box p,
+  .Testing_services_box p {
+    font-size: 14px;
+  }
+  .Best_software_box h1,
+  .Testing_services_box h1 {
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: #088f8f;
+  }
+  .B_I_offers ul li {
+    padding: 0 0 2px 0;
+    font-size: 16px;
+  }
+  .B_I_offers ul p {
+    padding-bottom: 24px;
+    font-size: 14px;
+  }
+  .About_Project_management,
+  .ProjectManagement_flex,
+  .P_M_services {
+    margin: 40px auto 30px auto;
+    width: 80%;
+  }
+  .ProjectManagement_flex h1 {
+    font-size: 18px;
+  }
+  .ProjectManagement_flex .ProjectManagement_img {
+    margin: 25px 0 40px 0;
+  }
+  .ProjectManagement_flex .ProjectManagement_img img {
+    width: 100%;
+    height: 70vh;
+  }
+  .P_M_heading h3 {
+    padding: 10px 0 15px 0;
+    font-size: 17px;
+  }
+  .services_P_M h2 {
+    color: #088f8f;
+    padding: 12px 0 8px 0;
+    font-size: 18px;
+  }
+  .Best_software_box,
+  .Testing_services_box {
+    margin: 50px auto;
+    width: 80%;
+  }
+  .Quality_box_service {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .Manual_testing,
+  .Automated_testing {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .Manual_testing h3,
+  .Automated_testing h3 {
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 15px;
+  }
+  .left_about_ h2 {
+    padding-bottom: 8px;
+    font-size: 25px;
+  }
+  .Qlty_solutions {
+    width: 80%;
+    margin: 40px auto;
+  }
+  .itconsult_flex {
+    width: 80%;
+    margin: 40px auto 50px auto;
+  }
+  .itconsult_flex > div {
+    width: 50%;
+    margin: 12px 8px;
+  }
+  .itconsult_flex > div h1 {
+    padding: 10px 0 15px 0;
+    font-size: 17px;
+  }
+  .itconsult_flex > div p {
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .itconsult_flex > div ul li {
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+  .itconsult_flex > div ul {
+    margin-left: 13px;
+  }
+  .Manual_testing ul li,
+  .Automated_testing ul li {
+    padding: 0 0 10px 12px;
+    list-style: none;
+    font-size: 14px;
+  }
+  .Qlty_solutions h3 {
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+  .Qlty_solutions_flex > div {
+    width: 33%;
+    padding: 5px 10px 5px 0;
+  }
+
+  .Qlty_solutions_flex .Focus_para {
+    padding: 10px 0;
+  }
+  .Qlty_solutions_flex > div h2 {
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .Qlty_solutions_flex ul li {
+    margin: 0 0 5px 14px;
+    list-style: none;
+    font-size: 14px;
+  }
+}
